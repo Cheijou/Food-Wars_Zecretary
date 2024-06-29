@@ -86,6 +86,12 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShop.Designer.cs">
+      <DependentUpon>FormShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ingredients.cs" />
     <Compile Include="Items.cs" />
     <Compile Include="ItemsShop.cs" />
@@ -97,6 +103,9 @@
     <Compile Include="Time.cs" />
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShop.resx">
+      <DependentUpon>FormShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -241,6 +250,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sound_hi.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Freeze.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
