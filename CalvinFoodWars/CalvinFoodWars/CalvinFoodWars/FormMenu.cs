@@ -22,12 +22,14 @@ namespace CalvinFoodWars
         Time remainingTime;
         Customers customer;
         Items item;
+        ItemsShop shop;
         private int selectedIngCount = 0;
         private int remainingCustomer = 0;
         private int dialogTime = 0;
         private int delayTime = 0;
         private int currentIncome = 0;
         private int incomePerGame = 0;
+        int temp2 = 0;
         //untuk mengganti stok dan inisialisasi
         Merchandise tumbler;
         Merchandise plushie;
@@ -36,6 +38,12 @@ namespace CalvinFoodWars
         WindowsMediaPlayer sound1 = new WindowsMediaPlayer();
         WindowsMediaPlayer sound2 = new WindowsMediaPlayer();
   
+        public FormMenu(Players players)
+        {
+            InitializeComponent();
+            if(temp2 > 0)
+                player = players;
+        }
         public FormMenu()
         {
             InitializeComponent();
@@ -45,6 +53,7 @@ namespace CalvinFoodWars
         #region Game Beginning
         private void StartMenu()
         {
+            this.Size = new Size(1151, 664);
             remainingCustomer = 10;
             PlaySound("play");
             panelStall.Visible = false;
@@ -52,6 +61,10 @@ namespace CalvinFoodWars
             panelDialog.Visible = false;
             panelTimeAndRemain.Visible = false;
             pictureBoxCustomer.Visible = false;
+            panelShop.Visible = true;
+            buttonExit.Visible = false;
+            panelFreeze.Visible = false;
+            panelMoney.Visible = false;
             timerCustomer.Interval = 800;
             timerGame.Interval = 1000;
             timerDelay.Interval = 800;
@@ -93,8 +106,16 @@ namespace CalvinFoodWars
             pictureBoxCustomer.Visible = true;
             pictureBoxOrderedItem.Visible = false;
             pictureBoxPlayer.Visible = true;
+            panelShop.Visible = false;
+
+            panelFreeze.Visible = false;
+            panelMoney.Visible = false;
+            if (temp2 == 0)
+            {
+                CreatePlayer();
+                temp2++;
+            }
             CreateCustomer();
-            CreatePlayer();
         }
         #endregion
 
@@ -398,6 +419,7 @@ namespace CalvinFoodWars
         private void ShowGameOverDialog()
         {
             //lose
+            if (time.Hour == 0 && time.Minute == 0 && time.Second == 50)
             if (remainingTime.Hour == 0 && remainingTime.Minute == 0 && remainingTime.Second == 0)
             {
                 PlaySound("lose");
@@ -756,8 +778,53 @@ namespace CalvinFoodWars
         {
             ChangePictureBoxColor(pictureBoxSCold, "leave");
         }
+
         #endregion
 
-        
+        #region shop
+        private void pictureBoxShop_MouseClick(object sender, MouseEventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Size = new Size(700, 480);
+            panelShop.Visible = false;
+            panelFreeze.Visible = true;
+            panelMoney.Visible = true;
+            buttonExit.Visible = true;
+        }
+        #endregion
+
+        #region button belum guna
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBoxShop_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void panelShop_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void panelShop_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
+
+        #endregion
+
+        #region Exit Shop
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            StartMenu();
+        }
+        #endregion
+
+        #region exit menu
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartMenu();
+        }
+        #endregion
     }
 }
