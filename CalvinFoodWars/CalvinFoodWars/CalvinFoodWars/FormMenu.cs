@@ -18,7 +18,8 @@ namespace CalvinFoodWars
         #region Declarations
         Players player;
         Players displayCurrent;
-        Time time;
+        Time recordedTime;
+        Time remainingTime;
         Customers customer;
         Items item;
         private int selectedIngCount = 0;
@@ -44,6 +45,7 @@ namespace CalvinFoodWars
         #region Game Beginning
         private void StartMenu()
         {
+            remainingCustomer = 10;
             PlaySound("play");
             panelStall.Visible = false;
             panelPlayer.Visible = false;
@@ -67,16 +69,17 @@ namespace CalvinFoodWars
         }
         private void NewGame()
         {
-            Merchandise merch;
             remainingCustomer = 10;
+            Merchandise merch;
             incomePerGame = 0;
             merch = new Merchandise(null, null, 0);
             merch.ResetStock();
             tumbler = new Merchandise("tumbler", Properties.Resources.tumbler, 30000);
             plushie = new Merchandise("plushie", Properties.Resources.plushie, 20000);
             dialogTime = 0;
-            time = new Time();
-            labelTime.Text = "Remaining time:\n " + "  " + time.Display();
+            remainingTime = new Time(0,0,40);
+            recordedTime = new Time();
+            labelTime.Text = "Remaining time:\n " + "  " + remainingTime.Display();
             labelStockTumb.Text = "Stock: " + merch.StockTumbler;  /*+(item as Merchandise).StockTumbler.ToString();*/
             labelStockPlushie.Text = "Stock: " + merch.StockPlushie;  /*+(item as Merchandise).StockPlushie.ToString();*/
             labelRemainingCust.Text = "Remaining Customers: " + remainingCustomer;
@@ -98,7 +101,7 @@ namespace CalvinFoodWars
         #region Creations
         private void CreatePlayer()
         {
-            player = new Players("Calvin", currentIncome, Properties.Resources.player, time);
+            player = new Players("Calvin", currentIncome, Properties.Resources.player, recordedTime);
             labelName.Text = player.DisplayName();
             labelIncome.Text = player.DisplayIncome();
             labelPrevTime.Text = displayCurrent.DisplayTime();
@@ -371,8 +374,9 @@ namespace CalvinFoodWars
         }
         private void TimerGame_Tick(object sender, EventArgs e)
         {
-            time.Add(1);
-            labelTime.Text = "Remaining time:\n " +"  "+ time.Display();
+            remainingTime.Add(-1);
+            recordedTime.Add(1);
+            labelTime.Text = "Remaining time:\n " +"  "+ remainingTime.Display();
             ShowGameOverDialog();
         }
         private void timerDelay_Tick(object sender, EventArgs e)
@@ -394,10 +398,12 @@ namespace CalvinFoodWars
         private void ShowGameOverDialog()
         {
             //lose
-            if (time.Hour == 0 && time.Minute == 0 && time.Second == 30)
+            if (remainingTime.Hour == 0 && remainingTime.Minute == 0 && remainingTime.Second == 0)
             {
                 PlaySound("lose");
                 timerGame.Stop();
+                timerCustomer.Stop();
+                timerDelay.Stop();
                 incomePerGame = 0;
                 currentIncome = player.Income;
                 var result = MessageBox.Show("Time is up, you lost all your income in this try.\nDo you want to try again?","Game Over",MessageBoxButtons.YesNo);
@@ -420,7 +426,9 @@ namespace CalvinFoodWars
                 displayCurrent = player;
                 labelPrevTime.Text = displayCurrent.DisplayTime();
                 timerGame.Stop();
-                var result = MessageBox.Show("You served all the customers in " + time.Second+ " seconds.\nWant to try again? ","Congratulations",MessageBoxButtons.YesNo);
+                timerCustomer.Stop();
+                timerDelay.Stop();
+                var result = MessageBox.Show("You served all the customers in " + recordedTime.Second+ " seconds.\nWant to try again? ","Congratulations",MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes) 
                 {
                     NewGame();

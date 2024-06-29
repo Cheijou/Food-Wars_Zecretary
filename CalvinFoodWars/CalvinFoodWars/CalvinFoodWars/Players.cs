@@ -48,7 +48,6 @@ namespace CalvinFoodWars
         {
             return "Prev Time Completed: \n" + Time.Hour.ToString().PadLeft(2, '0') + ":" + Time.Minute.ToString().PadLeft(2, '0') + ":" + Time.Second.ToString().PadLeft(2, '0');
         }
-        #endregion
         public int AddWithPrice(int income, int price)
         {
             return income += price;
@@ -57,5 +56,7 @@ namespace CalvinFoodWars
         {
             Income += price;
         }
+        #endregion
+
     }
 }
