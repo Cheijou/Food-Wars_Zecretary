@@ -16,5 +16,10 @@ namespace CalvinFoodWars
         {
             InitializeComponent();
         }
+
+        private void labelDisplayFreeze_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
