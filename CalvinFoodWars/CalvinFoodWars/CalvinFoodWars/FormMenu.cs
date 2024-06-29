@@ -53,18 +53,25 @@ namespace CalvinFoodWars
         #region Game Beginning
         private void StartMenu()
         {
+            temp2++;
+            if (temp2 == 1)
+            {
+                PlaySound("play");
+            }
+            
             this.Size = new Size(1100, 750);
             remainingCustomer = 10;
-            PlaySound("play");
             panelStall.Visible = false;
             panelPlayer.Visible = false;
             panelDialog.Visible = false;
+            panelGuideBook.Visible = true;
             panelTimeAndRemain.Visible = false;
             pictureBoxCustomer.Visible = false;
             panelShop.Visible = true;
             buttonExit.Visible = false;
             panelFreeze.Visible = false;
             panelMoney.Visible = false;
+            panelNotif.Visible = false;
             timerCustomer.Interval = 800;
             timerGame.Interval = 1000;
             timerDelay.Interval = 800;
@@ -101,6 +108,7 @@ namespace CalvinFoodWars
             panelNotif.Visible = false;
             this.BackgroundImage = null;
             panelStall.Visible = true;
+            panelGuideBook.Visible = false;
             panelPlayer.Visible = true;
             panelDialog.Visible = true;
             panelTimeAndRemain.Visible = true;
@@ -108,15 +116,10 @@ namespace CalvinFoodWars
             pictureBoxOrderedItem.Visible = false;
             pictureBoxPlayer.Visible = true;
             panelShop.Visible = false;
-
             panelFreeze.Visible = false;
             panelMoney.Visible = false;
-            if (temp2 == 0)
-            {
-                CreatePlayer();
-                temp2++;
-            }
             CreateCustomer();
+            CreatePlayer();
         }
         #endregion
 
@@ -437,6 +440,7 @@ namespace CalvinFoodWars
                 else
                 {
                     StartMenu();
+                    PlaySound("play");
                 }
             }
             //win
@@ -454,11 +458,12 @@ namespace CalvinFoodWars
                 if (result == DialogResult.Yes) 
                 {
                     NewGame();
-                    PlaySound("play");
+                    PlaySound("play");          
                 }
                 else
                 {
                     StartMenu();
+                    PlaySound("play");
                 }
                 incomePerGame = 0;
                 labelCurrentIncome.Text = "Prev Income: " + incomePerGame.ToString();
@@ -517,7 +522,7 @@ namespace CalvinFoodWars
         }
         #endregion
 
-        #region Image Clicks
+        #region Menu Clicks
         private void pictureBoxTumbler_Click(object sender, EventArgs e)
         {
             ServeOrder(pictureBoxTumbler, "merchant");
@@ -790,26 +795,12 @@ namespace CalvinFoodWars
             panelFreeze.Visible = true;
             panelMoney.Visible = true;
             buttonExit.Visible = true;
+            panelGuideBook.Visible = false;
         }
         #endregion
 
         #region button belum guna
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void pictureBoxShop_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panelShop_Paint(object sender, PaintEventArgs e)
-        {
-        }
-
-        private void panelShop_MouseClick(object sender, MouseEventArgs e)
-        {
-        }
+        
 
         #endregion
 
@@ -826,5 +817,7 @@ namespace CalvinFoodWars
             StartMenu();
         }
         #endregion
+
+        
     }
 }
