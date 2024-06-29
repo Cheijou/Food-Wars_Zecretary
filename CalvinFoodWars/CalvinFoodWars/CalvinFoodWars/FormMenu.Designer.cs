@@ -157,6 +157,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // labelRemainingCust
             // 
@@ -286,9 +287,9 @@
             this.panelShop.BackColor = System.Drawing.Color.Transparent;
             this.panelShop.Controls.Add(this.pictureBoxLabelShop);
             this.panelShop.Controls.Add(this.pictureBoxShop);
-            this.panelShop.Location = new System.Drawing.Point(48, 247);
+            this.panelShop.Location = new System.Drawing.Point(136, 295);
             this.panelShop.Name = "panelShop";
-            this.panelShop.Size = new System.Drawing.Size(137, 139);
+            this.panelShop.Size = new System.Drawing.Size(189, 186);
             this.panelShop.TabIndex = 16;
             this.panelShop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelShop_Paint);
             this.panelShop.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelShop_MouseClick);
@@ -298,7 +299,7 @@
             this.pictureBoxShop.Image = global::CalvinFoodWars.Properties.Resources.shop;
             this.pictureBoxShop.Location = new System.Drawing.Point(10, 25);
             this.pictureBoxShop.Name = "pictureBoxShop";
-            this.pictureBoxShop.Size = new System.Drawing.Size(119, 112);
+            this.pictureBoxShop.Size = new System.Drawing.Size(170, 161);
             this.pictureBoxShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxShop.TabIndex = 1;
             this.pictureBoxShop.TabStop = false;
@@ -308,7 +309,7 @@
             // pictureBoxLabelShop
             // 
             this.pictureBoxLabelShop.Image = global::CalvinFoodWars.Properties.Resources.labelShop;
-            this.pictureBoxLabelShop.Location = new System.Drawing.Point(21, 3);
+            this.pictureBoxLabelShop.Location = new System.Drawing.Point(36, 3);
             this.pictureBoxLabelShop.Name = "pictureBoxLabelShop";
             this.pictureBoxLabelShop.Size = new System.Drawing.Size(108, 30);
             this.pictureBoxLabelShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

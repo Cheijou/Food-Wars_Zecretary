@@ -52,6 +52,7 @@ namespace CalvinFoodWars
         #region Game Beginning
         private void StartMenu()
         {
+            this.Size = new Size(1151, 664);
             PlaySound("play");
             panelStall.Visible = false;
             panelPlayer.Visible = false;
@@ -70,7 +71,6 @@ namespace CalvinFoodWars
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Size = new Size(1151, 664);
             StartMenu();
             displayCurrent = new Players(null, 0, null, new Time());
         }
@@ -773,10 +773,7 @@ namespace CalvinFoodWars
 
         #endregion
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-        }
-
+        #region shop
         private void pictureBoxShop_MouseClick(object sender, MouseEventArgs e)
         {
             this.BackgroundImage = null;
@@ -785,6 +782,12 @@ namespace CalvinFoodWars
             panelFreeze.Visible = true;
             panelMoney.Visible = true;
             buttonExit.Visible = true;
+        }
+        #endregion
+
+        #region button belum guna
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
         }
 
         private void pictureBoxShop_Click(object sender, EventArgs e)
@@ -800,9 +803,20 @@ namespace CalvinFoodWars
         {
         }
 
+        #endregion
+
+        #region Exit Shop
         private void buttonExit_Click(object sender, EventArgs e)
         {
-
+            StartMenu();
         }
+        #endregion
+
+        #region exit menu
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StartMenu();
+        }
+        #endregion
     }
 }
