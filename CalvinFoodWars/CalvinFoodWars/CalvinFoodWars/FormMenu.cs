@@ -816,8 +816,14 @@ namespace CalvinFoodWars
         {
             StartMenu();
         }
+
         #endregion
 
-        
+        private void guideToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormGuide formGuide = new FormGuide();
+            formGuide.Owner = this;
+            formGuide.ShowDialog();
+        }
     }
 }
