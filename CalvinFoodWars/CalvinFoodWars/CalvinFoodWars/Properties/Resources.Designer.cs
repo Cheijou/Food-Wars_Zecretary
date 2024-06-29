@@ -103,9 +103,9 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Boost {
+        internal static System.Drawing.Bitmap book {
             get {
-                object obj = ResourceManager.GetObject("Boost", resourceCulture);
+                object obj = ResourceManager.GetObject("book", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,6 +233,16 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doublemoney {
+            get {
+                object obj = ResourceManager.GetObject("doublemoney", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap equal {
             get {
                 object obj = ResourceManager.GetObject("equal", resourceCulture);
@@ -266,16 +276,6 @@ namespace CalvinFoodWars.Properties {
         internal static System.Drawing.Bitmap food_stall {
             get {
                 object obj = ResourceManager.GetObject("food_stall", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Freeze {
-            get {
-                object obj = ResourceManager.GetObject("Freeze", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,6 +323,26 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap freeze {
+            get {
+                object obj = ResourceManager.GetObject("freeze", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guide {
+            get {
+                object obj = ResourceManager.GetObject("guide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap howtoplay {
             get {
                 object obj = ResourceManager.GetObject("howtoplay", resourceCulture);
@@ -356,6 +376,16 @@ namespace CalvinFoodWars.Properties {
         internal static System.Drawing.Bitmap labelShop {
             get {
                 object obj = ResourceManager.GetObject("labelShop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap layout {
+            get {
+                object obj = ResourceManager.GetObject("layout", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,9 +503,19 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap shop {
+        internal static System.Drawing.Bitmap saves {
             get {
-                object obj = ResourceManager.GetObject("shop", resourceCulture);
+                object obj = ResourceManager.GetObject("saves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shopimage {
+            get {
+                object obj = ResourceManager.GetObject("shopimage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

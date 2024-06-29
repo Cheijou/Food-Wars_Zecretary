@@ -29,13 +29,13 @@ namespace CalvinFoodWars
 
         private void buttonBuyBoost_Click(object sender, EventArgs e)
         {
-            item = new Buff("boost", 200000, Properties.Resources.Boost, players);
+            item = new Buff("boost", 200000, Properties.Resources.doublemoney, players);
             item.Sell("boost");
         }
 
         private void buttonBuyFreeze_Click(object sender, EventArgs e)
         {
-            item = new Buff("freeze", 100000, Properties.Resources.Freeze, players);
+            item = new Buff("freeze", 100000, Properties.Resources.freeze, players);
             item.Sell("");
         }
 

@@ -317,5 +317,26 @@
   <ItemGroup>
     <None Include="Resources\labelShop.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\_468c7cf4-6b7b-400c-ae4c-f0d5055991ee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\layout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saves.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guide.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

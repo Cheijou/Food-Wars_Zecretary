@@ -110,7 +110,6 @@
             // 
             this.pictureBoxFreeze.BackColor = System.Drawing.Color.Turquoise;
             this.pictureBoxFreeze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxFreeze.Image = global::CalvinFoodWars.Properties.Resources.Freeze;
             this.pictureBoxFreeze.Location = new System.Drawing.Point(23, 16);
             this.pictureBoxFreeze.Name = "pictureBoxFreeze";
             this.pictureBoxFreeze.Size = new System.Drawing.Size(133, 127);
@@ -122,7 +121,6 @@
             // 
             this.pictureBoxBoost.BackColor = System.Drawing.Color.White;
             this.pictureBoxBoost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxBoost.Image = global::CalvinFoodWars.Properties.Resources.Boost;
             this.pictureBoxBoost.Location = new System.Drawing.Point(25, 16);
             this.pictureBoxBoost.Name = "pictureBoxBoost";
             this.pictureBoxBoost.Size = new System.Drawing.Size(133, 127);

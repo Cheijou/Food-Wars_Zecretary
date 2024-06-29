@@ -58,8 +58,7 @@ namespace CalvinFoodWars
             {
                 PlaySound("play");
             }
-            
-            this.Size = new Size(1100, 750);
+            this.Size = new Size(857,644);
             remainingCustomer = 10;
             panelStall.Visible = false;
             panelPlayer.Visible = false;
@@ -67,14 +66,14 @@ namespace CalvinFoodWars
             panelGuideBook.Visible = true;
             panelTimeAndRemain.Visible = false;
             pictureBoxCustomer.Visible = false;
+            panelBoost.Visible = false;
             panelShop.Visible = true;
-            buttonExit.Visible = false;
             panelFreeze.Visible = false;
-            panelMoney.Visible = false;
             panelNotif.Visible = false;
             timerCustomer.Interval = 800;
             timerGame.Interval = 1000;
             timerDelay.Interval = 800;
+            pictureBoxBack.Visible = false;
             this.BackgroundImage = Properties.Resources.background;
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
@@ -89,7 +88,7 @@ namespace CalvinFoodWars
         }
         private void NewGame()
         {
-            this.Size = new Size(865, 710);
+            this.Size = new Size(865, 644);
             remainingCustomer = 10;
             Merchandise merch;
             incomePerGame = 0;
@@ -108,16 +107,17 @@ namespace CalvinFoodWars
             panelNotif.Visible = false;
             this.BackgroundImage = null;
             panelStall.Visible = true;
+            panelBoost.Visible = false;
             panelGuideBook.Visible = false;
             panelPlayer.Visible = true;
             panelDialog.Visible = true;
             panelTimeAndRemain.Visible = true;
             pictureBoxCustomer.Visible = true;
             pictureBoxOrderedItem.Visible = false;
+            pictureBoxBack.Visible = false;
             pictureBoxPlayer.Visible = true;
             panelShop.Visible = false;
             panelFreeze.Visible = false;
-            panelMoney.Visible = false;
             CreateCustomer();
             CreatePlayer();
         }
@@ -793,9 +793,9 @@ namespace CalvinFoodWars
             this.Size = new Size(700, 480);
             panelShop.Visible = false;
             panelFreeze.Visible = true;
-            panelMoney.Visible = true;
-            buttonExit.Visible = true;
+            panelBoost.Visible = true;
             panelGuideBook.Visible = false;
+            pictureBoxBack.Visible = true;
         }
         #endregion
 
@@ -805,10 +805,7 @@ namespace CalvinFoodWars
         #endregion
 
         #region Exit Shop
-        private void buttonExit_Click(object sender, EventArgs e)
-        {
-            StartMenu();
-        }
+        
         #endregion
 
         #region exit menu
@@ -819,11 +816,22 @@ namespace CalvinFoodWars
 
         #endregion
 
-        private void guideToolStripMenuItem_Click(object sender, EventArgs e)
+        
+    private void pictureBoxGuideBook_Click(object sender, EventArgs e)
         {
             FormGuide formGuide = new FormGuide();
             formGuide.Owner = this;
             formGuide.ShowDialog();
+        }
+
+        private void buttonBuyFreeze_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxBack_Click(object sender, EventArgs e)
+        {
+            StartMenu();
         }
     }
 }
