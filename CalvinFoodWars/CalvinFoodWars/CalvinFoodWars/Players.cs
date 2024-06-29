@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CalvinFoodWars
 {
-    class Players
+    public class Players
     {
         #region Data Members
         private string name;

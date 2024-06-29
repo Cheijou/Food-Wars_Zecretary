@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CalvinFoodWars
 {
-    class Time
+    public class Time
     {
         #region Data Members
         private int hour;
