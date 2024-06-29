@@ -53,7 +53,7 @@ namespace CalvinFoodWars
         #region Game Beginning
         private void StartMenu()
         {
-            this.Size = new Size(1151, 664);
+            this.Size = new Size(1100, 750);
             remainingCustomer = 10;
             PlaySound("play");
             panelStall.Visible = false;
@@ -82,6 +82,7 @@ namespace CalvinFoodWars
         }
         private void NewGame()
         {
+            this.Size = new Size(865, 710);
             remainingCustomer = 10;
             Merchandise merch;
             incomePerGame = 0;
