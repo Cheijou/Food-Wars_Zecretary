@@ -419,7 +419,6 @@ namespace CalvinFoodWars
         private void ShowGameOverDialog()
         {
             //lose
-            if (time.Hour == 0 && time.Minute == 0 && time.Second == 50)
             if (remainingTime.Hour == 0 && remainingTime.Minute == 0 && remainingTime.Second == 0)
             {
                 PlaySound("lose");
