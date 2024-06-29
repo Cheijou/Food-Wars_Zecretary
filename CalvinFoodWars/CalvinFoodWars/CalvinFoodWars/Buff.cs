@@ -15,9 +15,11 @@ namespace CalvinFoodWars
 
         public override void Sell(string temp)
         {
+            
             if (temp == "boost")
             {
                 Player.Income -= Price;
+
             }
             else
             {

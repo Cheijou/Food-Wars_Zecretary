@@ -34,5 +34,6 @@ namespace CalvinFoodWars
             return "Name: " + Name +
                    "\nPrice: " + Price;
         }
+        
     }
 }

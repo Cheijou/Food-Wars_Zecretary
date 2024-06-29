@@ -13,9 +13,13 @@ namespace CalvinFoodWars
     public partial class FormShop : Form
     {
         FormMenu form;
-        public FormShop()
+        Buff buff;
+        ItemsShop item;
+        Players players;
+        public FormShop(Players player)
         {
             InitializeComponent();
+            players = player;
         }
 
         private void labelDisplayFreeze_Click(object sender, EventArgs e)
@@ -25,12 +29,14 @@ namespace CalvinFoodWars
 
         private void buttonBuyBoost_Click(object sender, EventArgs e)
         {
-
+            item = new Buff("boost", 200000, Properties.Resources.Boost, players);
+            item.Sell("boost");
         }
 
         private void buttonBuyFreeze_Click(object sender, EventArgs e)
         {
-
+            item = new Buff("freeze", 100000, Properties.Resources.Freeze, players);
+            item.Sell("");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
