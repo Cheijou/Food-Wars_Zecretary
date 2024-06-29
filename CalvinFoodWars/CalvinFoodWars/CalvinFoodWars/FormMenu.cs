@@ -50,6 +50,7 @@ namespace CalvinFoodWars
             panelDialog.Visible = false;
             panelTimeAndRemain.Visible = false;
             pictureBoxCustomer.Visible = false;
+            panelShop.Visible = true;
             timerCustomer.Interval = 800;
             timerGame.Interval = 1000;
             timerDelay.Interval = 800;
@@ -67,6 +68,7 @@ namespace CalvinFoodWars
         }
         private void NewGame()
         {
+
             Merchandise merch;
             remainingCustomer = 10;
             incomePerGame = 0;
@@ -90,6 +92,7 @@ namespace CalvinFoodWars
             pictureBoxCustomer.Visible = true;
             pictureBoxOrderedItem.Visible = false;
             pictureBoxPlayer.Visible = true;
+            panelShop.Visible = true;
             CreateCustomer();
             CreatePlayer();
         }
@@ -748,8 +751,19 @@ namespace CalvinFoodWars
         {
             ChangePictureBoxColor(pictureBoxSCold, "leave");
         }
+
         #endregion
 
-        
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxShop_MouseClick(object sender, MouseEventArgs e)
+        {
+            FormShop form = new FormShop();
+            form.Owner = this;
+            form.ShowDialog();
+        }
     }
 }

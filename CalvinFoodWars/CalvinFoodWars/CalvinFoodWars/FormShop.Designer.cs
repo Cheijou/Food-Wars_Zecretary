@@ -32,10 +32,11 @@
             this.labelDisplayFreeze = new System.Windows.Forms.Label();
             this.panelMoney = new System.Windows.Forms.Panel();
             this.labelDisplayBoost = new System.Windows.Forms.Label();
-            this.pictureBoxFreeze = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBoost = new System.Windows.Forms.PictureBox();
             this.buttonBuyBoost = new System.Windows.Forms.Button();
             this.buttonBuyFreeze = new System.Windows.Forms.Button();
+            this.pictureBoxFreeze = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBoost = new System.Windows.Forms.PictureBox();
+            this.buttonExit = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelMoney.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFreeze)).BeginInit();
@@ -44,6 +45,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Aquamarine;
             this.panel1.Controls.Add(this.buttonBuyFreeze);
             this.panel1.Controls.Add(this.labelDisplayFreeze);
             this.panel1.Controls.Add(this.pictureBoxFreeze);
@@ -65,6 +67,7 @@
             // 
             // panelMoney
             // 
+            this.panelMoney.BackColor = System.Drawing.Color.Orange;
             this.panelMoney.Controls.Add(this.buttonBuyBoost);
             this.panelMoney.Controls.Add(this.labelDisplayBoost);
             this.panelMoney.Controls.Add(this.pictureBoxBoost);
@@ -83,9 +86,31 @@
             this.labelDisplayBoost.TabIndex = 1;
             this.labelDisplayBoost.Text = "labelBoost";
             // 
+            // buttonBuyBoost
+            // 
+            this.buttonBuyBoost.Location = new System.Drawing.Point(51, 153);
+            this.buttonBuyBoost.Name = "buttonBuyBoost";
+            this.buttonBuyBoost.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuyBoost.TabIndex = 2;
+            this.buttonBuyBoost.Text = "Buy";
+            this.buttonBuyBoost.UseVisualStyleBackColor = true;
+            this.buttonBuyBoost.Click += new System.EventHandler(this.buttonBuyBoost_Click);
+            // 
+            // buttonBuyFreeze
+            // 
+            this.buttonBuyFreeze.Location = new System.Drawing.Point(51, 153);
+            this.buttonBuyFreeze.Name = "buttonBuyFreeze";
+            this.buttonBuyFreeze.Size = new System.Drawing.Size(75, 23);
+            this.buttonBuyFreeze.TabIndex = 3;
+            this.buttonBuyFreeze.Text = "Buy";
+            this.buttonBuyFreeze.UseVisualStyleBackColor = true;
+            this.buttonBuyFreeze.Click += new System.EventHandler(this.buttonBuyFreeze_Click);
+            // 
             // pictureBoxFreeze
             // 
+            this.pictureBoxFreeze.BackColor = System.Drawing.Color.Turquoise;
             this.pictureBoxFreeze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFreeze.Image = global::CalvinFoodWars.Properties.Resources.Freeze;
             this.pictureBoxFreeze.Location = new System.Drawing.Point(23, 16);
             this.pictureBoxFreeze.Name = "pictureBoxFreeze";
             this.pictureBoxFreeze.Size = new System.Drawing.Size(133, 127);
@@ -95,8 +120,9 @@
             // 
             // pictureBoxBoost
             // 
-            this.pictureBoxBoost.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBoost.BackColor = System.Drawing.Color.White;
             this.pictureBoxBoost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxBoost.Image = global::CalvinFoodWars.Properties.Resources.Boost;
             this.pictureBoxBoost.Location = new System.Drawing.Point(25, 16);
             this.pictureBoxBoost.Name = "pictureBoxBoost";
             this.pictureBoxBoost.Size = new System.Drawing.Size(133, 127);
@@ -104,34 +130,28 @@
             this.pictureBoxBoost.TabIndex = 0;
             this.pictureBoxBoost.TabStop = false;
             // 
-            // buttonBuyBoost
+            // buttonExit
             // 
-            this.buttonBuyBoost.Location = new System.Drawing.Point(51, 153);
-            this.buttonBuyBoost.Name = "buttonBuyBoost";
-            this.buttonBuyBoost.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuyBoost.TabIndex = 2;
-            this.buttonBuyBoost.Text = "button1";
-            this.buttonBuyBoost.UseVisualStyleBackColor = true;
-            // 
-            // buttonBuyFreeze
-            // 
-            this.buttonBuyFreeze.Location = new System.Drawing.Point(51, 153);
-            this.buttonBuyFreeze.Name = "buttonBuyFreeze";
-            this.buttonBuyFreeze.Size = new System.Drawing.Size(75, 23);
-            this.buttonBuyFreeze.TabIndex = 3;
-            this.buttonBuyFreeze.Text = "button1";
-            this.buttonBuyFreeze.UseVisualStyleBackColor = true;
+            this.buttonExit.Location = new System.Drawing.Point(542, 406);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(111, 43);
+            this.buttonExit.TabIndex = 4;
+            this.buttonExit.Text = "Exit";
+            this.buttonExit.UseVisualStyleBackColor = true;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(696, 421);
+            this.ClientSize = new System.Drawing.Size(682, 461);
+            this.Controls.Add(this.buttonExit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelMoney);
             this.Name = "FormShop";
             this.Text = "FormShop";
+            this.Load += new System.EventHandler(this.FormShop_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelMoney.ResumeLayout(false);
@@ -152,5 +172,6 @@
         private System.Windows.Forms.PictureBox pictureBoxBoost;
         private System.Windows.Forms.Button buttonBuyBoost;
         private System.Windows.Forms.Button buttonBuyFreeze;
+        private System.Windows.Forms.Button buttonExit;
     }
 }

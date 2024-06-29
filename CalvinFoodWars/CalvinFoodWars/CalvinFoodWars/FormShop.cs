@@ -12,6 +12,7 @@ namespace CalvinFoodWars
 {
     public partial class FormShop : Form
     {
+        FormMenu form;
         public FormShop()
         {
             InitializeComponent();
@@ -20,6 +21,26 @@ namespace CalvinFoodWars
         private void labelDisplayFreeze_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonBuyBoost_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBuyFreeze_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void FormShop_Load(object sender, EventArgs e)
+        {
+            form = (FormMenu)this.Owner;
         }
     }
 }

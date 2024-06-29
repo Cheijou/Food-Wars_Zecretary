@@ -253,6 +253,16 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap labelShop {
+            get {
+                object obj = ResourceManager.GetObject("labelShop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lettuce {
             get {
                 object obj = ResourceManager.GetObject("lettuce", resourceCulture);
