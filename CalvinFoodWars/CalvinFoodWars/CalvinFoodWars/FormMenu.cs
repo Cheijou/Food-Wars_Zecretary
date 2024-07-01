@@ -100,8 +100,8 @@ namespace CalvinFoodWars
             remainingTime = new Time(0,0,40);
             recordedTime = new Time();
             labelTime.Text = "Remaining time:\n " + "  " + remainingTime.Display();
-            labelStockTumb.Text = "Stock: " + merch.StockTumbler;  /*+(item as Merchandise).StockTumbler.ToString();*/
-            labelStockPlushie.Text = "Stock: " + merch.StockPlushie;  /*+(item as Merchandise).StockPlushie.ToString();*/
+            labelStockTumb.Text = "Stock: " + merch.Stock;  /*+(item as Merchandise).StockTumbler.ToString();*/
+            labelStockPlushie.Text = "Stock: " + merch.Stock;  /*+(item as Merchandise).StockPlushie.ToString();*/
             labelRemainingCust.Text = "Remaining Customers: " + remainingCustomer;
             timerGame.Start();
             panelNotif.Visible = false;
@@ -287,31 +287,32 @@ namespace CalvinFoodWars
                 {
                     if (customer.Item is Merchandise)
                     {
-                        Merchandise merchOrder = (Merchandise)customer.Item;
-                        if (merchOrder.Name == "tumbler")
+                        Merchandise merchTumbler = (Merchandise)customer.Item;
+                        Merchandise merchPlushie = (Merchandise)customer.Item;
+                        if (merchTumbler.Name == "tumbler")
                         {
-                            if (pictureBox.Tag.ToString() == merchOrder.Name)
+                            if (pictureBox.Tag.ToString() == merchTumbler.Name)
                             {
-                                merchOrder.Sell();
-                                int stockTumbler = merchOrder.StockTumbler;
+                                merchTumbler.Sell();
+                                int stockTumbler = merchTumbler.Stock;
                                 pictureBoxCheck.Image = pictureBox.Image;
                                 labelStockTumb.Text = "Stock: " + stockTumbler;
-                                CorrectOrder(merchOrder);
+                                CorrectOrder(merchTumbler);
                             }
                             else
                             {
                                 WrongOrder();
                             }
                         }
-                        if (merchOrder.Name == "plushie")
+                        if (merchPlushie.Name == "plushie")
                         {
-                            if (pictureBox.Tag.ToString() == merchOrder.Name)
+                            if (pictureBox.Tag.ToString() == merchPlushie.Name)
                             {
-                                merchOrder.Sell();
-                                int stockPlushie = merchOrder.StockPlushie;
+                                merchPlushie.Sell();
+                                int stockPlushie = merchPlushie.Stock;
                                 pictureBoxCheck.Image = pictureBox.Image;
                                 labelStockPlushie.Text = "Stock: " + stockPlushie;
-                                CorrectOrder(merchOrder);
+                                CorrectOrder(merchPlushie);
                             }
                             else
                             {

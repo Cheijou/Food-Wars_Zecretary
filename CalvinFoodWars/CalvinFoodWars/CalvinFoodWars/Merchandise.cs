@@ -10,36 +10,19 @@ namespace CalvinFoodWars
     public class Merchandise:Items
     {
         #region Data Members
-        private int stockPlushie;
-        private int stockTumbler;
+        private int stock;
         #endregion
 
         #region Constructors
         public Merchandise(string name, Image picture, int price) : base(name, picture, price)
         {
-            StockPlushie = 5;
-            StockTumbler = 5;
+            Stock = 5;
         }
         #endregion
         #region Properties
-        public int StockPlushie
-        { 
-            get => stockPlushie;
-            private set
-            {
-                if (value < 0)
-                {
-                    throw new Exception("Sorry, stock for this merchant is empty.");
-                }
-                else
-                {
-                    stockPlushie = value;
-                }
-            }
-        }
-        public int StockTumbler 
+        public int Stock
         {
-            get => stockTumbler;
+            get => stock;
             private set
             {
                 if (value < 0)
@@ -48,7 +31,7 @@ namespace CalvinFoodWars
                 }
                 else
                 {
-                    stockTumbler = value;   
+                    stock = value;
                 }
             }
         }
@@ -62,20 +45,11 @@ namespace CalvinFoodWars
         }
         public void Sell()
         {
-            if (Name == "plushie")
-            {
-                StockPlushie--;
-            }
-           
-            if (Name == "tumbler")
-            {
-                StockTumbler--;
-            }
+            Stock--;
         }
         public void ResetStock()
         {
-            StockPlushie = 5;
-            StockTumbler = 5;
+            Stock = 5;
         }
         #endregion
     }
