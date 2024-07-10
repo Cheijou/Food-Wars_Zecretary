@@ -17,6 +17,7 @@ namespace CalvinFoodWars
     {
         #region Declarations
         public List<Players> listPlayer = new List<Players>();
+        
         Players player;
         Players displayCurrent;
         Time recordedTime;
@@ -852,12 +853,18 @@ namespace CalvinFoodWars
 
         private void pictureBoxFreeze_Click(object sender, EventArgs e)
         {
-            shops.freeze.Stock--;
+            freeze.Stock--;
+            BackgroundImage = Properties.Resources.efekFreeze;
         }
 
         private void pictureBoxBoost_Click(object sender, EventArgs e)
         {
-            shops.boost.Stock--;
+            boost.Stock--;
+        }
+
+        private void labelSisaFreeze_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
