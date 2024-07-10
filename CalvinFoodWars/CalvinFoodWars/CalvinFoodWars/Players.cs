@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ namespace CalvinFoodWars
         private int income;
         private Image picture;
         private Time time;
+        private List<ItemsShop> listItem;
         #endregion
 
         #region Constructors
@@ -23,6 +25,8 @@ namespace CalvinFoodWars
             this.Income = income;
             this.Picture = picture;
             this.Time = time;
+            ListItem = new List<ItemsShop>();
+            AddItem(this);
         }
 
         #endregion
@@ -32,6 +36,7 @@ namespace CalvinFoodWars
         public int Income { get => income; set => income = value; }
         public Image Picture { get => picture; set => picture = value; }
         public Time Time { get => time; set => time = value; }
+        public List<ItemsShop> ListItem { get => listItem; set => listItem = value; }
         #endregion
 
         #region Methods
@@ -56,6 +61,14 @@ namespace CalvinFoodWars
         {
             Income += price;
         }
+        public void AddItem(Players player)
+        {
+            ItemsShop item = new Buff("freeze", 200000,Properties.Resources.freeze, player);
+            listItem.Add(item);
+            ItemsShop item2 = new Buff("boost", 300000, Properties.Resources.doublemoney, player);
+            listItem.Add(item2);
+        }
+
         #endregion
 
     }

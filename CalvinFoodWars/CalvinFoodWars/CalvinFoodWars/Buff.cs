@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Drawing;
+using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace CalvinFoodWars
 {
@@ -15,15 +17,33 @@ namespace CalvinFoodWars
 
         public override void Sell(string temp)
         {
-            
             if (temp == "boost")
             {
-                Player.Income -= Price;
-
+                foreach(ItemsShop s in Player.ListItem)
+                {
+                    if (s is Buff a)
+                    {
+                        if(a.Name == "boost")
+                        {
+                            a.Stock++;
+                            Player.Income -= a.Price;
+                        }
+                    }                    
+                }
             }
-            else
+            else if (temp == "freeze")
             {
-                Player.Income -= Price;
+                foreach (ItemsShop s in Player.ListItem)
+                {
+                    if (s is Buff a)
+                    {
+                        if (a.Name == "freeze")
+                        {
+                            a.Stock++;
+                            Player.Income -= a.Price;
+                        }
+                    }
+                }
             }
         }
         public override string Display(string temp)

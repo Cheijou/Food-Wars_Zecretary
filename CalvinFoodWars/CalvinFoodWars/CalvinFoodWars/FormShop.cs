@@ -29,14 +29,10 @@ namespace CalvinFoodWars
 
         private void buttonBuyBoost_Click(object sender, EventArgs e)
         {
-            item = new Buff("boost", 200000, Properties.Resources.doublemoney, players);
-            item.Sell("boost");
         }
 
         private void buttonBuyFreeze_Click(object sender, EventArgs e)
         {
-            item = new Buff("freeze", 100000, Properties.Resources.freeze, players);
-            item.Sell("");
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -49,11 +45,22 @@ namespace CalvinFoodWars
             form = (FormMenu)this.Owner;
             comboBoxPlayers.DataSource = form.listPlayer;
             comboBoxPlayers.DisplayMember = "Name";
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            players = (Players)comboBoxPlayers.SelectedItem;
+            labelCurrency.Text = players.Income.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            item.Sell("boost");
+        }
+
+        private void buttonBuyFreeze_Click_1(object sender, EventArgs e)
+        {
+            item.Sell("freeze");
         }
     }
 }

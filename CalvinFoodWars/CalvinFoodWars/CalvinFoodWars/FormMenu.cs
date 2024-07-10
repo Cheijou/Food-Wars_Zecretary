@@ -63,6 +63,7 @@ namespace CalvinFoodWars
             pictureBoxCustomer.Visible = false;
             panelShop.Visible = true;
             panelNotif.Visible = false;
+            panelBuff.Visible = false;
             timerCustomer.Interval = 800;
             timerGame.Interval = 1000;
             timerDelay.Interval = 800;
@@ -107,6 +108,9 @@ namespace CalvinFoodWars
             pictureBoxOrderedItem.Visible = false;
             pictureBoxPlayer.Visible = true;
             panelShop.Visible = false;
+            panelBuff.Visible = true;
+            pictureBoxBoost.Image = Properties.Resources.moneyDis;
+            pictureBoxFreeze.Image = Properties.Resources.freezeDis;
             CreateCustomer();
             CreatePlayer();
         }
