@@ -23,14 +23,16 @@ namespace CalvinFoodWars
         Time remainingTime;
         Customers customer;
         Items item;
-        ItemsShop shop;
+        public Buff boost = new Buff("boost", 100000, Properties.Resources.doublemoney);
+        public Buff freeze = new Buff("freeze", 50000, Properties.Resources.freeze);
         private int selectedIngCount = 0;
         private int remainingCustomer = 0;
         private int dialogTime = 0;
         private int delayTime = 0;
-        private int currentIncome = 0;
         private int incomePerGame = 0;
-
+        public int currentIncome = 0;
+        int boostStock = 0;
+        int freezeStock = 0;
         int temp2 = 0;
         FormShop shops;
         //untuk mengganti stok dan inisialisasi
@@ -86,6 +88,8 @@ namespace CalvinFoodWars
             this.Size = new Size(865, 644);
             remainingCustomer = 10;
             Merchandise merch;
+            freezeStock = freeze.Stock;
+            boostStock = boost.Stock;
             incomePerGame = 0;
             merch = new Merchandise(null, null, 0);
             merch.ResetStock();
@@ -111,8 +115,22 @@ namespace CalvinFoodWars
             pictureBoxPlayer.Visible = true;
             panelShop.Visible = false;
             panelBuff.Visible = true;
-            pictureBoxBoost.Image = Properties.Resources.moneyDis;
-            pictureBoxFreeze.Image = Properties.Resources.freezeDis;
+            if (boostStock == 0)
+            {
+                pictureBoxBoost.Image = Properties.Resources.moneyDis;
+            }
+            else
+            {
+                pictureBoxBoost.Image = Properties.Resources.doublemoney;
+            }
+            if (freezeStock == 0)
+            {
+                pictureBoxFreeze.Image = Properties.Resources.freezeDis;
+            }
+            else
+            {
+                pictureBoxFreeze.Image = Properties.Resources.freeze;
+            }
             CreateCustomer();
             CreatePlayer();
         }
@@ -835,7 +853,11 @@ namespace CalvinFoodWars
         private void pictureBoxFreeze_Click(object sender, EventArgs e)
         {
             shops.freeze.Stock--;
-            
+        }
+
+        private void pictureBoxBoost_Click(object sender, EventArgs e)
+        {
+            shops.boost.Stock--;
         }
     }
 }

@@ -100,7 +100,6 @@
     </Compile>
     <Compile Include="Ingredients.cs" />
     <Compile Include="Items.cs" />
-    <Compile Include="ItemsShop.cs" />
     <Compile Include="Merchandise.cs" />
     <Compile Include="Players.cs" />
     <Compile Include="Program.cs" />

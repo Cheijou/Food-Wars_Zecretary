@@ -34,11 +34,13 @@ namespace CalvinFoodWars
             get => income;
             set
             {
-                if (income > 0)
+                if (value >= 0) 
+                {
                     income = value;
+                }
                 else
                 {
-                    throw new Exception("insufficient money to buy this item");
+                    throw new Exception("Insufficient money to buy this item");
                 }
             }
         }

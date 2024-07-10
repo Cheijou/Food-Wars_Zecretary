@@ -13,7 +13,6 @@ namespace CalvinFoodWars
     public partial class FormShop : Form
     {
         FormMenu form;
-        Buff buff;
         Players players;
         public Buff freeze;
         public Buff boost;
@@ -45,8 +44,8 @@ namespace CalvinFoodWars
             form = (FormMenu)this.Owner;
             comboBoxPlayers.DataSource = form.listPlayer;
             comboBoxPlayers.DisplayMember = "Name";
-            freeze = new Buff("freeze", 50000, Properties.Resources.freeze);
-            boost = new Buff("boost", 100000, Properties.Resources.doublemoney);
+            freeze = form.freeze;
+            boost = form.boost;
             labelPriceBoost.Text = boost.Price.ToString();
             labelPriceFreeze.Text = freeze.Price.ToString();
             labelDescBoost.Text = boost.Display();
@@ -68,6 +67,7 @@ namespace CalvinFoodWars
                 players.Income = boost.Sell(income);
                 labelBoostRemaining.Text = boost.Stock.ToString();
                 labelCurrency.Text = players.Income.ToString();
+                form.currentIncome = players.Income;
             }
             catch(Exception ex)
             {
@@ -84,6 +84,7 @@ namespace CalvinFoodWars
                 players.Income = freeze.Sell(income);
                 labelFrRem.Text = freeze.Stock.ToString();
                 labelCurrency.Text = players.Income.ToString();
+                form.currentIncome = income;
             }
             catch (Exception ex)
             {

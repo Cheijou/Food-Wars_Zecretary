@@ -8,13 +8,24 @@ using System.Xml.Linq;
 
 namespace CalvinFoodWars
 {
-    public class Buff : ItemsShop
+    public class Buff : Items
     {
-        public Buff(string name, int price, Image picture) : base(name, price, picture)
+        #region Data Members
+        private int stock;
+        #endregion
+        
+        #region Constructors
+        public Buff(string name, int price, Image picture) : base(name,picture,price)
         {
             Stock = 0;
         }
+        #endregion
 
+        #region Properties
+        public int Stock { get => stock; set => stock = value; }
+        #endregion
+
+        #region Methods
         public override int Sell(int income)
         {
             if (Name == "boost")
@@ -40,5 +51,6 @@ namespace CalvinFoodWars
                 return "Freeze the times \n for 10 seconds";
             }
         }
+        #endregion
     }
 }

@@ -10,14 +10,14 @@
   <Class Name="CalvinFoodWars.Items" Collapsed="true">
     <Position X="6" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABgAAAAYAAAAAAAAAAAQYAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAABgAAAAYAAAAAAQAAAAQYAgAAEAIAAAAAAAAAAAAA=</HashCode>
       <FileName>Items.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CalvinFoodWars.Players" Collapsed="true">
     <Position X="10.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABkAAAAIBBAAAAARAAAAQAAAAGABAAAgAAAAAAAQI=</HashCode>
+      <HashCode>AAABkAAAAIBAAAAAABAAAAQAAAAGABAAAgAAAAAAAQI=</HashCode>
       <FileName>Players.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -59,25 +59,18 @@
       <FileName>Time.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CalvinFoodWars.Skin">
-    <Position X="14.5" Y="8.75" Width="1.5" />
+  <Class Name="CalvinFoodWars.Skin" Collapsed="true">
+    <Position X="10.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Skin.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="CalvinFoodWars.Buff">
-    <Position X="10.25" Y="9.25" Width="1.5" />
+  <Class Name="CalvinFoodWars.Buff" Collapsed="true">
+    <Position X="1.25" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Buff.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="CalvinFoodWars.ItemsShop">
-    <Position X="12.5" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAABgAAAAYAAAAAAQAAAAQYAgAAEAIAAAAAAAAAAAAA=</HashCode>
-      <FileName>ItemsShop.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

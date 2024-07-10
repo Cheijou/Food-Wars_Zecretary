@@ -6,10 +6,11 @@ using System.Drawing;
 
 namespace CalvinFoodWars
 {
-    public class Skin : ItemsShop
-    {
-        public Skin(string name, int price, Image picture) : base(name, price, picture)
+    public class Skin : Items
+    { 
+        public Skin(string name, int price, Image picture) : base(name,picture,price)
         {
+
         }
         public override int Sell(int income)
         {

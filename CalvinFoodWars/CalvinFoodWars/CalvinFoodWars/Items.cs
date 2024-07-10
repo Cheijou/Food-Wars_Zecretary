@@ -40,7 +40,10 @@ namespace CalvinFoodWars
         {
             return "";
         }
-        
+        public virtual int Sell(int income)
+        {
+            return 0;
+        }
         #endregion
     }
 }
