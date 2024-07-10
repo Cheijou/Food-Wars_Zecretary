@@ -32,12 +32,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createNewPlayerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveProgressToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelRemainingCust = new System.Windows.Forms.Label();
             this.panelTimeAndRemain = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.panelPlayer = new System.Windows.Forms.Panel();
-            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.labelCurrentIncome = new System.Windows.Forms.Label();
             this.labelPrevTime = new System.Windows.Forms.Label();
             this.labelIncome = new System.Windows.Forms.Label();
@@ -71,6 +72,10 @@
             this.buttonBuyBoost = new System.Windows.Forms.Button();
             this.labelNameBoost = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.panelSave = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxSaves = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBack = new System.Windows.Forms.PictureBox();
             this.panelDialog = new System.Windows.Forms.Panel();
             this.labelDialog = new System.Windows.Forms.Label();
             this.pictureBoxOrderedItem = new System.Windows.Forms.PictureBox();
@@ -99,7 +104,6 @@
             this.menuStrip1.SuspendLayout();
             this.panelTimeAndRemain.SuspendLayout();
             this.panelPlayer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).BeginInit();
             this.panelNotif.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -115,6 +119,10 @@
             this.panelBoost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.panelSave.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaves)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).BeginInit();
             this.panelDialog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrderedItem)).BeginInit();
             this.panelStall.SuspendLayout();
@@ -145,7 +153,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.gameToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.saveProgressToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
@@ -156,7 +165,8 @@
             // gameToolStripMenuItem
             // 
             this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newGameToolStripMenuItem});
+            this.newGameToolStripMenuItem,
+            this.createNewPlayerToolStripMenuItem});
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
             this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 22);
             this.gameToolStripMenuItem.Text = "Game";
@@ -164,9 +174,16 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.newGameToolStripMenuItem.Text = "Create New";
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.newGameToolStripMenuItem.Text = "Play";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.NewGameToolStripMenuItem_Click);
+            // 
+            // createNewPlayerToolStripMenuItem
+            // 
+            this.createNewPlayerToolStripMenuItem.Name = "createNewPlayerToolStripMenuItem";
+            this.createNewPlayerToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.createNewPlayerToolStripMenuItem.Text = "Create New Player";
+            this.createNewPlayerToolStripMenuItem.Click += new System.EventHandler(this.createNewPlayerToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -174,6 +191,13 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(86, 22);
             this.exitToolStripMenuItem.Text = "Exit to Menu";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // saveProgressToolStripMenuItem
+            // 
+            this.saveProgressToolStripMenuItem.Name = "saveProgressToolStripMenuItem";
+            this.saveProgressToolStripMenuItem.Size = new System.Drawing.Size(91, 22);
+            this.saveProgressToolStripMenuItem.Text = "Save Progress";
+            this.saveProgressToolStripMenuItem.Click += new System.EventHandler(this.saveProgressToolStripMenuItem_Click);
             // 
             // labelRemainingCust
             // 
@@ -215,18 +239,6 @@
             this.panelPlayer.Name = "panelPlayer";
             this.panelPlayer.Size = new System.Drawing.Size(319, 126);
             this.panelPlayer.TabIndex = 14;
-            // 
-            // pictureBoxBack
-            // 
-            this.pictureBoxBack.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxBack.Image = global::CalvinFoodWars.Properties.Resources.back;
-            this.pictureBoxBack.Location = new System.Drawing.Point(0, 36);
-            this.pictureBoxBack.Name = "pictureBoxBack";
-            this.pictureBoxBack.Size = new System.Drawing.Size(56, 50);
-            this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBack.TabIndex = 33;
-            this.pictureBoxBack.TabStop = false;
-            this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
             // 
             // labelCurrentIncome
             // 
@@ -588,6 +600,50 @@
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
             // 
+            // panelSave
+            // 
+            this.panelSave.Controls.Add(this.pictureBox2);
+            this.panelSave.Controls.Add(this.pictureBoxSaves);
+            this.panelSave.Location = new System.Drawing.Point(699, 171);
+            this.panelSave.Name = "panelSave";
+            this.panelSave.Size = new System.Drawing.Size(131, 136);
+            this.panelSave.TabIndex = 35;
+            this.panelSave.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelSave_MouseClick);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::CalvinFoodWars.Properties.Resources.saves;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(112, 37);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 34;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBoxSaves
+            // 
+            this.pictureBoxSaves.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxSaves.Image = global::CalvinFoodWars.Properties.Resources.floppy;
+            this.pictureBoxSaves.Location = new System.Drawing.Point(0, 20);
+            this.pictureBoxSaves.Name = "pictureBoxSaves";
+            this.pictureBoxSaves.Size = new System.Drawing.Size(142, 116);
+            this.pictureBoxSaves.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxSaves.TabIndex = 35;
+            this.pictureBoxSaves.TabStop = false;
+            this.pictureBoxSaves.Click += new System.EventHandler(this.pictureBoxSaves_Click);
+            // 
+            // pictureBoxBack
+            // 
+            this.pictureBoxBack.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxBack.Image = global::CalvinFoodWars.Properties.Resources.back;
+            this.pictureBoxBack.Location = new System.Drawing.Point(0, 36);
+            this.pictureBoxBack.Name = "pictureBoxBack";
+            this.pictureBoxBack.Size = new System.Drawing.Size(56, 50);
+            this.pictureBoxBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBack.TabIndex = 33;
+            this.pictureBoxBack.TabStop = false;
+            this.pictureBoxBack.Click += new System.EventHandler(this.pictureBoxBack_Click);
+            // 
             // panelDialog
             // 
             this.panelDialog.BackColor = System.Drawing.Color.Transparent;
@@ -935,6 +991,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(841, 605);
+            this.Controls.Add(this.panelSave);
             this.Controls.Add(this.pictureBoxBack);
             this.Controls.Add(this.panelBoost);
             this.Controls.Add(this.panelGuideBook);
@@ -956,7 +1013,6 @@
             this.panelTimeAndRemain.PerformLayout();
             this.panelPlayer.ResumeLayout(false);
             this.panelPlayer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();
             this.panelNotif.ResumeLayout(false);
             this.panelNotif.PerformLayout();
@@ -975,6 +1031,10 @@
             this.panelBoost.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.panelSave.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSaves)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBack)).EndInit();
             this.panelDialog.ResumeLayout(false);
             this.panelDialog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrderedItem)).EndInit();
@@ -1073,6 +1133,11 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBoxBack;
         private System.Windows.Forms.PictureBox pictureBoxGuide;
+        private System.Windows.Forms.ToolStripMenuItem saveProgressToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem createNewPlayerToolStripMenuItem;
+        private System.Windows.Forms.Panel panelSave;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBoxSaves;
     }
 }
 

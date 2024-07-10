@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CalvinFoodWars
 {
+    [Serializable]
     public class Time
     {
         #region Data Members

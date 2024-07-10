@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace CalvinFoodWars
 {
+    [Serializable]
     public class Players
     {
         #region Data Members
@@ -28,7 +29,21 @@ namespace CalvinFoodWars
         #endregion
 
         #region Properties
-        public string Name { get => name; set => name = value; }
+        public string Name 
+        {
+            get => name; 
+            set
+            {
+                if (value != "")
+                {
+                    name = value;
+                }
+                else
+                {
+                    throw new Exception("Please insert your name/username");
+                }       
+            }
+        }
         public int Income { get => income; set => income = value; }
         public Image Picture { get => picture; set => picture = value; }
         public Time Time { get => time; set => time = value; }

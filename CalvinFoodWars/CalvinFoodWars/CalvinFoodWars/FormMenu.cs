@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using System.Media;
 using System.IO;
 using WMPLib;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace CalvinFoodWars
 {
     public partial class FormMenu : Form
     {
+        public List<Players> listPlayers = new List<Players>();
+        public string playerFileName = "players.dat";
         #region Declarations
         Players player;
         Players displayCurrent;
@@ -80,12 +83,32 @@ namespace CalvinFoodWars
         private void Form1_Load(object sender, EventArgs e)
         {
             StartMenu();
+            if (listPlayers.Count == 0)
+            {
+                FormAddPlayer formAdd = new FormAddPlayer();
+                formAdd.Owner = this;
+                formAdd.ShowDialog();
+            }
             displayCurrent = new Players(null, 0, null, new Time());
+        }
+        private void createNewPlayerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAddPlayer formAdd = new FormAddPlayer();
+            formAdd.Owner = this;
+            formAdd.ShowDialog();
         }
         private void NewGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
             NewGame();
         }
+        public void ProfileSet(Players selectedPlayer)
+        {
+            player = selectedPlayer;
+            labelName.Text = player.DisplayName();
+            labelIncome.Text = player.DisplayIncome();
+            labelCurrentIncome.Text = player.DisplayTime();
+        }
+
         private void NewGame()
         {
             this.Size = new Size(865, 644);
@@ -99,6 +122,12 @@ namespace CalvinFoodWars
             dialogTime = 0;
             remainingTime = new Time(0,0,40);
             recordedTime = new Time();
+            labelName.Text = player.DisplayName();
+            labelIncome.Text = player.DisplayIncome();
+            labelPrevTime.Text = displayCurrent.DisplayTime();
+            pictureBoxPlayer.Image = player.Picture;
+            labelCurrentIncome.Text = "Prev Income: " + incomePerGame.ToString();
+            pictureBoxPlayer.Image = player.Picture;
             labelTime.Text = "Remaining time:\n " + "  " + remainingTime.Display();
             labelStockTumb.Text = "Stock: " + merch.Stock;  /*+(item as Merchandise).StockTumbler.ToString();*/
             labelStockPlushie.Text = "Stock: " + merch.Stock;  /*+(item as Merchandise).StockPlushie.ToString();*/
@@ -119,20 +148,11 @@ namespace CalvinFoodWars
             panelShop.Visible = false;
             panelFreeze.Visible = false;
             CreateCustomer();
-            CreatePlayer();
         }
         #endregion
 
         #region Creations
-        private void CreatePlayer()
-        {
-            player = new Players("Calvin", currentIncome, Properties.Resources.player, recordedTime);
-            labelName.Text = player.DisplayName();
-            labelIncome.Text = player.DisplayIncome();
-            labelPrevTime.Text = displayCurrent.DisplayTime();
-            labelCurrentIncome.Text = "Prev Income: " + incomePerGame.ToString();
-            pictureBoxPlayer.Image = player.Picture;
-        }
+        
         private void CreateCustomer()
         {
             PlaySound("hi");
@@ -787,6 +807,46 @@ namespace CalvinFoodWars
 
         #endregion
 
+        #region Save and Load
+        public void SaveToFilePlayers(string filename)
+        {
+            FileStream myFile = new FileStream(filename, FileMode.Create, FileAccess.Write);
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(myFile, listPlayers);
+            myFile.Close();
+        }
+        public void LoadFromFileStudent(string filename)
+        {
+            if (File.Exists(filename))
+            {
+                FileStream myFile = new FileStream(filename, FileMode.Open, FileAccess.Read);
+                BinaryFormatter formatter = new BinaryFormatter();
+                listPlayers = (List<Players>)formatter.Deserialize(myFile);
+                myFile.Close();
+            }
+        }
+        private void saveProgressToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (player.Name != null)
+                {
+                    listPlayers.Add(player);
+                    MessageBox.Show("Player progress saved successfully!");
+                    SaveToFilePlayers(playerFileName);
+                }
+                else
+                {
+                    throw new Exception("You must create player first to save your progress.");
+                }
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
         #region shop
         private void pictureBoxShop_MouseClick(object sender, MouseEventArgs e)
         {
@@ -818,7 +878,7 @@ namespace CalvinFoodWars
         #endregion
 
         
-    private void pictureBoxGuideBook_Click(object sender, EventArgs e)
+        private void pictureBoxGuideBook_Click(object sender, EventArgs e)
         {
             FormGuide formGuide = new FormGuide();
             formGuide.Owner = this;
@@ -833,6 +893,18 @@ namespace CalvinFoodWars
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             StartMenu();
+        }
+
+        private void panelSave_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void pictureBoxSaves_Click(object sender, EventArgs e)
+        {
+            FormLoadPlayer formLoad = new FormLoadPlayer();
+            formLoad.Owner = this;
+            formLoad.ShowDialog();
         }
     }
 }
