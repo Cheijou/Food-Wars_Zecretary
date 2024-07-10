@@ -26,7 +26,7 @@ namespace CalvinFoodWars
         public Image Picture { get => picture; set => picture = value; }
         public int Stock { get => stock; set => stock = value; }
 
-        public abstract void Sell();
+        public abstract int Sell(int income);
         public abstract string Display();
         protected string DisplayItems()
         {

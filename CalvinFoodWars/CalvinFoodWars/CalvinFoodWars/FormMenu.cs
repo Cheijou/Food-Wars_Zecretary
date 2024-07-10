@@ -30,6 +30,7 @@ namespace CalvinFoodWars
         private int delayTime = 0;
         private int currentIncome = 0;
         private int incomePerGame = 0;
+
         int temp2 = 0;
         FormShop shops;
         //untuk mengganti stok dan inisialisasi
@@ -824,6 +825,17 @@ namespace CalvinFoodWars
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             StartMenu();
+        }
+
+        private void timerFreeze_Tick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBoxFreeze_Click(object sender, EventArgs e)
+        {
+            shops.freeze.Stock--;
+            
         }
     }
 }

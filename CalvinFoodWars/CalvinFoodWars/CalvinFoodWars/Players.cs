@@ -15,7 +15,6 @@ namespace CalvinFoodWars
         private int income;
         private Image picture;
         private Time time;
-        private List<ItemsShop> listItem;
         #endregion
 
         #region Constructors
@@ -25,17 +24,26 @@ namespace CalvinFoodWars
             this.Income = income;
             this.Picture = picture;
             this.Time = time;
-            ListItem = new List<ItemsShop>();
         }
 
         #endregion
 
         #region Properties
         public string Name { get => name; set => name = value; }
-        public int Income { get => income; set => income = value; }
+        public int Income { 
+            get => income;
+            set
+            {
+                if (income > 0)
+                    income = value;
+                else
+                {
+                    throw new Exception("insufficient money to buy this item");
+                }
+            }
+        }
         public Image Picture { get => picture; set => picture = value; }
         public Time Time { get => time; set => time = value; }
-        public List<ItemsShop> ListItem { get => listItem; set => listItem = value; }
         #endregion
 
         #region Methods

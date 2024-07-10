@@ -15,16 +15,19 @@ namespace CalvinFoodWars
             Stock = 0;
         }
 
-        public override void Sell()
+        public override int Sell(int income)
         {
-            if (Name== "boost")
+            if (Name == "boost")
             {
+                income -= Price;
                 Stock++;
             }
             else if (Name == "freeze")
             {
+                income -= Price;
                 Stock++;
             }
+            return income;
         }
         public override string Display()
         {

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonExit = new System.Windows.Forms.Button();
             this.panelBoost = new System.Windows.Forms.Panel();
             this.labelBoostRemaining = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.pictureBoxFreeze = new System.Windows.Forms.PictureBox();
             this.labelCurrency = new System.Windows.Forms.Label();
             this.comboBoxPlayers = new System.Windows.Forms.ComboBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelBoost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -276,6 +278,10 @@
             this.comboBoxPlayers.TabIndex = 36;
             this.comboBoxPlayers.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -323,5 +329,6 @@
         private System.Windows.Forms.PictureBox pictureBoxFreeze;
         private System.Windows.Forms.Label labelCurrency;
         private System.Windows.Forms.ComboBox comboBoxPlayers;
+        private System.Windows.Forms.Timer timer1;
     }
 }

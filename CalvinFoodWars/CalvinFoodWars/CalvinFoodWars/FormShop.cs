@@ -14,10 +14,9 @@ namespace CalvinFoodWars
     {
         FormMenu form;
         Buff buff;
-        ItemsShop item;
         Players players;
-        Buff freeze;
-        Buff boost;
+        public Buff freeze;
+        public Buff boost;
         public FormShop()
         {
             InitializeComponent();
@@ -62,20 +61,44 @@ namespace CalvinFoodWars
 
         private void button1_Click(object sender, EventArgs e)
         {
-            item.Sell();
-            labelBoostRemaining.Text = boost.Stock.ToString();
-
+            try
+            {
+                players = (Players)comboBoxPlayers.SelectedItem;
+                int income = players.Income;
+                players.Income = boost.Sell(income);
+                labelBoostRemaining.Text = boost.Stock.ToString();
+                labelCurrency.Text = players.Income.ToString();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonBuyFreeze_Click_1(object sender, EventArgs e)
         {
-            item.Sell();
-            labelFrRem.Text = freeze.Stock.ToString();
+            try
+            {
+                players = (Players)comboBoxPlayers.SelectedItem;
+                int income = players.Income;
+                players.Income = freeze.Sell(income);
+                labelFrRem.Text = freeze.Stock.ToString();
+                labelCurrency.Text = players.Income.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void labelBoostRemaining_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+          
         }
     }
 }

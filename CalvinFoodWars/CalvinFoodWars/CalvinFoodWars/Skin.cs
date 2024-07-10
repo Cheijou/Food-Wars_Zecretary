@@ -11,9 +11,9 @@ namespace CalvinFoodWars
         public Skin(string name, int price, Image picture) : base(name, price, picture)
         {
         }
-        public override void Sell()
+        public override int Sell(int income)
         {
-
+            return 0;
         }
         public override string Display()
         {
