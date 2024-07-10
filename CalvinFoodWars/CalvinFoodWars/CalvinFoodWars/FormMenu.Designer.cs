@@ -40,24 +40,26 @@
             this.labelCurrentIncome = new System.Windows.Forms.Label();
             this.labelPrevTime = new System.Windows.Forms.Label();
             this.labelIncome = new System.Windows.Forms.Label();
+            this.pictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.labelName = new System.Windows.Forms.Label();
             this.panelNotif = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelNotif = new System.Windows.Forms.Label();
             this.timerCustomer = new System.Windows.Forms.Timer(this.components);
             this.timerGame = new System.Windows.Forms.Timer(this.components);
             this.timerDelay = new System.Windows.Forms.Timer(this.components);
             this.panelShop = new System.Windows.Forms.Panel();
-            this.panelGuideBook = new System.Windows.Forms.Panel();
-            this.panelBuff = new System.Windows.Forms.Panel();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.pictureBoxBoost = new System.Windows.Forms.PictureBox();
-            this.pictureBoxFreeze = new System.Windows.Forms.PictureBox();
-            this.pictureBoxGuide = new System.Windows.Forms.PictureBox();
-            this.pictureBoxGuideBook = new System.Windows.Forms.PictureBox();
             this.pictureBoxLabelShop = new System.Windows.Forms.PictureBox();
             this.pictureBoxShop = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxPlayer = new System.Windows.Forms.PictureBox();
+            this.panelGuideBook = new System.Windows.Forms.Panel();
+            this.pictureBoxGuide = new System.Windows.Forms.PictureBox();
+            this.pictureBoxGuideBook = new System.Windows.Forms.PictureBox();
+            this.panelBuff = new System.Windows.Forms.Panel();
+            this.labelSisaBoost = new System.Windows.Forms.Label();
+            this.labelSisaFreeze = new System.Windows.Forms.Label();
+            this.pictureBoxBoost = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFreeze = new System.Windows.Forms.PictureBox();
+            this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.panelDialog = new System.Windows.Forms.Panel();
             this.labelDialog = new System.Windows.Forms.Label();
             this.pictureBoxOrderedItem = new System.Windows.Forms.PictureBox();
@@ -83,23 +85,22 @@
             this.labelStockPlushie = new System.Windows.Forms.Label();
             this.labelStockTumb = new System.Windows.Forms.Label();
             this.pictureBoxCustomer = new System.Windows.Forms.PictureBox();
-            this.labelSisaFreeze = new System.Windows.Forms.Label();
-            this.labelSisaBoost = new System.Windows.Forms.Label();
+            this.timerFreeze = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.panelTimeAndRemain.SuspendLayout();
             this.panelPlayer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).BeginInit();
             this.panelNotif.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelShop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelShop)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShop)).BeginInit();
             this.panelGuideBook.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuideBook)).BeginInit();
             this.panelBuff.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFreeze)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuide)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuideBook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelShop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShop)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).BeginInit();
             this.panelDialog.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrderedItem)).BeginInit();
             this.panelStall.SuspendLayout();
@@ -134,7 +135,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1121, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1121, 26);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -143,7 +144,7 @@
             this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newGameToolStripMenuItem});
             this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
-            this.gameToolStripMenuItem.Size = new System.Drawing.Size(62, 28);
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.gameToolStripMenuItem.Text = "Game";
             // 
             // newGameToolStripMenuItem
@@ -156,7 +157,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(106, 28);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.exitToolStripMenuItem.Text = "Exit to Menu";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -176,7 +177,7 @@
             this.panelTimeAndRemain.Controls.Add(this.labelRemainingCust);
             this.panelTimeAndRemain.Controls.Add(this.labelTime);
             this.panelTimeAndRemain.Location = new System.Drawing.Point(832, 44);
-            this.panelTimeAndRemain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTimeAndRemain.Margin = new System.Windows.Forms.Padding(4);
             this.panelTimeAndRemain.Name = "panelTimeAndRemain";
             this.panelTimeAndRemain.Size = new System.Drawing.Size(273, 159);
             this.panelTimeAndRemain.TabIndex = 12;
@@ -200,7 +201,7 @@
             this.panelPlayer.Controls.Add(this.pictureBoxPlayer);
             this.panelPlayer.Controls.Add(this.labelName);
             this.panelPlayer.Location = new System.Drawing.Point(29, 58);
-            this.panelPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelPlayer.Margin = new System.Windows.Forms.Padding(4);
             this.panelPlayer.Name = "panelPlayer";
             this.panelPlayer.Size = new System.Drawing.Size(425, 155);
             this.panelPlayer.TabIndex = 14;
@@ -238,6 +239,17 @@
             this.labelIncome.TabIndex = 14;
             this.labelIncome.Text = "labelIncomeSave";
             // 
+            // pictureBoxPlayer
+            // 
+            this.pictureBoxPlayer.Image = global::CalvinFoodWars.Properties.Resources.player;
+            this.pictureBoxPlayer.Location = new System.Drawing.Point(3, 4);
+            this.pictureBoxPlayer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxPlayer.Name = "pictureBoxPlayer";
+            this.pictureBoxPlayer.Size = new System.Drawing.Size(104, 119);
+            this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPlayer.TabIndex = 13;
+            this.pictureBoxPlayer.TabStop = false;
+            // 
             // labelName
             // 
             this.labelName.AutoSize = true;
@@ -254,10 +266,21 @@
             this.panelNotif.Controls.Add(this.pictureBox1);
             this.panelNotif.Controls.Add(this.labelNotif);
             this.panelNotif.Location = new System.Drawing.Point(428, 62);
-            this.panelNotif.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelNotif.Margin = new System.Windows.Forms.Padding(4);
             this.panelNotif.Name = "panelNotif";
             this.panelNotif.Size = new System.Drawing.Size(153, 57);
             this.panelNotif.TabIndex = 30;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::CalvinFoodWars.Properties.Resources.money;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 29;
+            this.pictureBox1.TabStop = false;
             // 
             // labelNotif
             // 
@@ -293,6 +316,29 @@
             this.panelShop.Size = new System.Drawing.Size(147, 156);
             this.panelShop.TabIndex = 16;
             // 
+            // pictureBoxLabelShop
+            // 
+            this.pictureBoxLabelShop.Image = global::CalvinFoodWars.Properties.Resources.labelShop;
+            this.pictureBoxLabelShop.Location = new System.Drawing.Point(13, 0);
+            this.pictureBoxLabelShop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxLabelShop.Name = "pictureBoxLabelShop";
+            this.pictureBoxLabelShop.Size = new System.Drawing.Size(108, 41);
+            this.pictureBoxLabelShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxLabelShop.TabIndex = 0;
+            this.pictureBoxLabelShop.TabStop = false;
+            // 
+            // pictureBoxShop
+            // 
+            this.pictureBoxShop.Image = global::CalvinFoodWars.Properties.Resources.shopimage;
+            this.pictureBoxShop.Location = new System.Drawing.Point(3, 26);
+            this.pictureBoxShop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxShop.Name = "pictureBoxShop";
+            this.pictureBoxShop.Size = new System.Drawing.Size(133, 135);
+            this.pictureBoxShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxShop.TabIndex = 1;
+            this.pictureBoxShop.TabStop = false;
+            this.pictureBoxShop.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxShop_MouseClick);
+            // 
             // panelGuideBook
             // 
             this.panelGuideBook.BackColor = System.Drawing.Color.Transparent;
@@ -303,38 +349,6 @@
             this.panelGuideBook.Name = "panelGuideBook";
             this.panelGuideBook.Size = new System.Drawing.Size(161, 176);
             this.panelGuideBook.TabIndex = 31;
-            // 
-            // panelBuff
-            // 
-            this.panelBuff.BackColor = System.Drawing.Color.Transparent;
-            this.panelBuff.Controls.Add(this.labelSisaBoost);
-            this.panelBuff.Controls.Add(this.labelSisaFreeze);
-            this.panelBuff.Controls.Add(this.pictureBoxBoost);
-            this.panelBuff.Controls.Add(this.pictureBoxFreeze);
-            this.panelBuff.Location = new System.Drawing.Point(6, 202);
-            this.panelBuff.Name = "panelBuff";
-            this.panelBuff.Size = new System.Drawing.Size(238, 251);
-            this.panelBuff.TabIndex = 32;
-            // 
-            // pictureBoxBoost
-            // 
-            this.pictureBoxBoost.Image = global::CalvinFoodWars.Properties.Resources.doublemoney;
-            this.pictureBoxBoost.Location = new System.Drawing.Point(118, 12);
-            this.pictureBoxBoost.Name = "pictureBoxBoost";
-            this.pictureBoxBoost.Size = new System.Drawing.Size(96, 94);
-            this.pictureBoxBoost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBoost.TabIndex = 1;
-            this.pictureBoxBoost.TabStop = false;
-            // 
-            // pictureBoxFreeze
-            // 
-            this.pictureBoxFreeze.Image = global::CalvinFoodWars.Properties.Resources.freeze;
-            this.pictureBoxFreeze.Location = new System.Drawing.Point(16, 13);
-            this.pictureBoxFreeze.Name = "pictureBoxFreeze";
-            this.pictureBoxFreeze.Size = new System.Drawing.Size(96, 94);
-            this.pictureBoxFreeze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxFreeze.TabIndex = 0;
-            this.pictureBoxFreeze.TabStop = false;
             // 
             // pictureBoxGuide
             // 
@@ -360,50 +374,56 @@
             this.pictureBoxGuideBook.TabStop = false;
             this.pictureBoxGuideBook.Click += new System.EventHandler(this.pictureBoxGuideBook_Click);
             // 
-            // pictureBoxLabelShop
+            // panelBuff
             // 
-            this.pictureBoxLabelShop.Image = global::CalvinFoodWars.Properties.Resources.labelShop;
-            this.pictureBoxLabelShop.Location = new System.Drawing.Point(13, 0);
-            this.pictureBoxLabelShop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxLabelShop.Name = "pictureBoxLabelShop";
-            this.pictureBoxLabelShop.Size = new System.Drawing.Size(108, 41);
-            this.pictureBoxLabelShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxLabelShop.TabIndex = 0;
-            this.pictureBoxLabelShop.TabStop = false;
+            this.panelBuff.BackColor = System.Drawing.Color.Transparent;
+            this.panelBuff.Controls.Add(this.labelSisaBoost);
+            this.panelBuff.Controls.Add(this.labelSisaFreeze);
+            this.panelBuff.Controls.Add(this.pictureBoxBoost);
+            this.panelBuff.Controls.Add(this.pictureBoxFreeze);
+            this.panelBuff.Location = new System.Drawing.Point(6, 202);
+            this.panelBuff.Name = "panelBuff";
+            this.panelBuff.Size = new System.Drawing.Size(238, 251);
+            this.panelBuff.TabIndex = 32;
             // 
-            // pictureBoxShop
+            // labelSisaBoost
             // 
-            this.pictureBoxShop.Image = global::CalvinFoodWars.Properties.Resources.shopimage;
-            this.pictureBoxShop.Location = new System.Drawing.Point(3, 26);
-            this.pictureBoxShop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxShop.Name = "pictureBoxShop";
-            this.pictureBoxShop.Size = new System.Drawing.Size(133, 135);
-            this.pictureBoxShop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxShop.TabIndex = 1;
-            this.pictureBoxShop.TabStop = false;
-            this.pictureBoxShop.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxShop_MouseClick);
+            this.labelSisaBoost.AutoSize = true;
+            this.labelSisaBoost.Location = new System.Drawing.Point(128, 114);
+            this.labelSisaBoost.Name = "labelSisaBoost";
+            this.labelSisaBoost.Size = new System.Drawing.Size(73, 16);
+            this.labelSisaBoost.TabIndex = 3;
+            this.labelSisaBoost.Text = "labelSisaB";
             // 
-            // pictureBox1
+            // labelSisaFreeze
             // 
-            this.pictureBox1.Image = global::CalvinFoodWars.Properties.Resources.money;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 10);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(36, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 29;
-            this.pictureBox1.TabStop = false;
+            this.labelSisaFreeze.AutoSize = true;
+            this.labelSisaFreeze.Location = new System.Drawing.Point(27, 114);
+            this.labelSisaFreeze.Name = "labelSisaFreeze";
+            this.labelSisaFreeze.Size = new System.Drawing.Size(72, 16);
+            this.labelSisaFreeze.TabIndex = 2;
+            this.labelSisaFreeze.Text = "labelSisaF";
             // 
-            // pictureBoxPlayer
+            // pictureBoxBoost
             // 
-            this.pictureBoxPlayer.Image = global::CalvinFoodWars.Properties.Resources.player;
-            this.pictureBoxPlayer.Location = new System.Drawing.Point(3, 4);
-            this.pictureBoxPlayer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBoxPlayer.Name = "pictureBoxPlayer";
-            this.pictureBoxPlayer.Size = new System.Drawing.Size(104, 119);
-            this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPlayer.TabIndex = 13;
-            this.pictureBoxPlayer.TabStop = false;
+            this.pictureBoxBoost.Image = global::CalvinFoodWars.Properties.Resources.doublemoney;
+            this.pictureBoxBoost.Location = new System.Drawing.Point(118, 12);
+            this.pictureBoxBoost.Name = "pictureBoxBoost";
+            this.pictureBoxBoost.Size = new System.Drawing.Size(96, 94);
+            this.pictureBoxBoost.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBoost.TabIndex = 1;
+            this.pictureBoxBoost.TabStop = false;
+            // 
+            // pictureBoxFreeze
+            // 
+            this.pictureBoxFreeze.Image = global::CalvinFoodWars.Properties.Resources.freeze;
+            this.pictureBoxFreeze.Location = new System.Drawing.Point(16, 13);
+            this.pictureBoxFreeze.Name = "pictureBoxFreeze";
+            this.pictureBoxFreeze.Size = new System.Drawing.Size(96, 94);
+            this.pictureBoxFreeze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxFreeze.TabIndex = 0;
+            this.pictureBoxFreeze.TabStop = false;
+            this.pictureBoxFreeze.Click += new System.EventHandler(this.pictureBoxFreeze_Click);
             // 
             // panelDialog
             // 
@@ -770,23 +790,9 @@
             this.pictureBoxCustomer.TabIndex = 15;
             this.pictureBoxCustomer.TabStop = false;
             // 
-            // labelSisaFreeze
+            // timerFreeze
             // 
-            this.labelSisaFreeze.AutoSize = true;
-            this.labelSisaFreeze.Location = new System.Drawing.Point(27, 114);
-            this.labelSisaFreeze.Name = "labelSisaFreeze";
-            this.labelSisaFreeze.Size = new System.Drawing.Size(72, 16);
-            this.labelSisaFreeze.TabIndex = 2;
-            this.labelSisaFreeze.Text = "labelSisaF";
-            // 
-            // labelSisaBoost
-            // 
-            this.labelSisaBoost.AutoSize = true;
-            this.labelSisaBoost.Location = new System.Drawing.Point(128, 114);
-            this.labelSisaBoost.Name = "labelSisaBoost";
-            this.labelSisaBoost.Size = new System.Drawing.Size(73, 16);
-            this.labelSisaBoost.TabIndex = 3;
-            this.labelSisaBoost.Text = "labelSisaB";
+            this.timerFreeze.Tick += new System.EventHandler(this.timerFreeze_Tick);
             // 
             // FormMenu
             // 
@@ -805,7 +811,7 @@
             this.Controls.Add(this.panelTimeAndRemain);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBoxCustomer);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMenu";
             this.Text = "Food Wars";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -815,20 +821,20 @@
             this.panelTimeAndRemain.PerformLayout();
             this.panelPlayer.ResumeLayout(false);
             this.panelPlayer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();
             this.panelNotif.ResumeLayout(false);
             this.panelNotif.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelShop.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelShop)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShop)).EndInit();
             this.panelGuideBook.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuideBook)).EndInit();
             this.panelBuff.ResumeLayout(false);
             this.panelBuff.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBoost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFreeze)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuide)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGuideBook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLabelShop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxShop)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();
             this.panelDialog.ResumeLayout(false);
             this.panelDialog.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrderedItem)).EndInit();
@@ -916,6 +922,7 @@
         private System.Windows.Forms.PictureBox pictureBoxFreeze;
         private System.Windows.Forms.Label labelSisaFreeze;
         private System.Windows.Forms.Label labelSisaBoost;
+        private System.Windows.Forms.Timer timerFreeze;
     }
 }
 

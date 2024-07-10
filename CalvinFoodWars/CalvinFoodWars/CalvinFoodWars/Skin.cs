@@ -8,14 +8,14 @@ namespace CalvinFoodWars
 {
     public class Skin : ItemsShop
     {
-        public Skin(string name, int price, Image picture, Players players) : base(name, price, picture, players)
+        public Skin(string name, int price, Image picture) : base(name, price, picture)
         {
         }
-        public override void Sell(string temp)
+        public override int Sell(int income)
         {
-
+            return 0;
         }
-        public override string Display(string temp)
+        public override string Display()
         {
             return "";
         }
