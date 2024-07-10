@@ -16,7 +16,7 @@ namespace CalvinFoodWars
     public partial class FormMenu : Form
     {
         #region Declarations
-        public List<FormMenu> listPlayer = new List<FormMenu>();
+        public List<Players> listPlayer = new List<Players>();
         Players player;
         Players displayCurrent;
         Time recordedTime;
@@ -31,6 +31,7 @@ namespace CalvinFoodWars
         private int currentIncome = 0;
         private int incomePerGame = 0;
         int temp2 = 0;
+        FormShop shops;
         //untuk mengganti stok dan inisialisasi
         Merchandise tumbler;
         Merchandise plushie;
@@ -120,6 +121,7 @@ namespace CalvinFoodWars
         private void CreatePlayer()
         {
             player = new Players("Calvin", currentIncome, Properties.Resources.player, recordedTime);
+            listPlayer.Add(player);
             labelName.Text = player.DisplayName();
             labelIncome.Text = player.DisplayIncome();
             labelPrevTime.Text = displayCurrent.DisplayTime();

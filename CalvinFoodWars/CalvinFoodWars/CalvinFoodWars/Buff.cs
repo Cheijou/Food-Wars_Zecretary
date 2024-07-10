@@ -10,51 +10,31 @@ namespace CalvinFoodWars
 {
     public class Buff : ItemsShop
     {
-        public Buff(string name, int price, Image picture, Players players) : base(name, price, picture, players)
+        public Buff(string name, int price, Image picture) : base(name, price, picture)
         {
-
+            Stock = 0;
         }
 
-        public override void Sell(string temp)
+        public override void Sell()
         {
-            if (temp == "boost")
+            if (Name== "boost")
             {
-                foreach(ItemsShop s in Player.ListItem)
-                {
-                    if (s is Buff a)
-                    {
-                        if(a.Name == "boost")
-                        {
-                            a.Stock++;
-                            Player.Income -= a.Price;
-                        }
-                    }                    
-                }
+                Stock++;
             }
-            else if (temp == "freeze")
+            else if (Name == "freeze")
             {
-                foreach (ItemsShop s in Player.ListItem)
-                {
-                    if (s is Buff a)
-                    {
-                        if (a.Name == "freeze")
-                        {
-                            a.Stock++;
-                            Player.Income -= a.Price;
-                        }
-                    }
-                }
+                Stock++;
             }
         }
-        public override string Display(string temp)
+        public override string Display()
         {
-            if (temp == "boost")
+            if (Name == "boost")
             {
-                return base.DisplayItems() + "\n" + "Boost 2x order value for 10 seconds";
+                return "Boost 2x order \n value for 10 seconds";
             }
             else
             {
-                return base.DisplayItems() + "\n" + "Freeze the times for 10 seconds";
+                return "Freeze the times \n for 10 seconds";
             }
         }
     }

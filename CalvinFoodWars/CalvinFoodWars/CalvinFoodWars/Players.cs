@@ -26,7 +26,6 @@ namespace CalvinFoodWars
             this.Picture = picture;
             this.Time = time;
             ListItem = new List<ItemsShop>();
-            AddItem(this);
         }
 
         #endregion
@@ -61,13 +60,7 @@ namespace CalvinFoodWars
         {
             Income += price;
         }
-        public void AddItem(Players player)
-        {
-            ItemsShop item = new Buff("freeze", 200000,Properties.Resources.freeze, player);
-            listItem.Add(item);
-            ItemsShop item2 = new Buff("boost", 300000, Properties.Resources.doublemoney, player);
-            listItem.Add(item2);
-        }
+        
 
         #endregion
 
