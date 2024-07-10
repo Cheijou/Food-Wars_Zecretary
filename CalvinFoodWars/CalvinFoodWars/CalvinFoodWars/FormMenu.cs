@@ -66,14 +66,11 @@ namespace CalvinFoodWars
             panelGuideBook.Visible = true;
             panelTimeAndRemain.Visible = false;
             pictureBoxCustomer.Visible = false;
-            panelBoost.Visible = false;
             panelShop.Visible = true;
-            panelFreeze.Visible = false;
             panelNotif.Visible = false;
             timerCustomer.Interval = 800;
             timerGame.Interval = 1000;
             timerDelay.Interval = 800;
-            pictureBoxBack.Visible = false;
             this.BackgroundImage = Properties.Resources.background;
             this.BackgroundImageLayout = ImageLayout.Stretch;
         }
@@ -107,17 +104,14 @@ namespace CalvinFoodWars
             panelNotif.Visible = false;
             this.BackgroundImage = null;
             panelStall.Visible = true;
-            panelBoost.Visible = false;
             panelGuideBook.Visible = false;
             panelPlayer.Visible = true;
             panelDialog.Visible = true;
             panelTimeAndRemain.Visible = true;
             pictureBoxCustomer.Visible = true;
             pictureBoxOrderedItem.Visible = false;
-            pictureBoxBack.Visible = false;
             pictureBoxPlayer.Visible = true;
             panelShop.Visible = false;
-            panelFreeze.Visible = false;
             CreateCustomer();
             CreatePlayer();
         }
@@ -790,13 +784,9 @@ namespace CalvinFoodWars
         #region shop
         private void pictureBoxShop_MouseClick(object sender, MouseEventArgs e)
         {
-            this.BackgroundImage = null;
-            this.Size = new Size(700, 480);
-            panelShop.Visible = false;
-            panelFreeze.Visible = true;
-            panelBoost.Visible = true;
-            panelGuideBook.Visible = false;
-            pictureBoxBack.Visible = true;
+            FormShop form = new FormShop();
+            form.Owner = this;
+            form.ShowDialog();
         }
         #endregion
 

@@ -16,10 +16,9 @@ namespace CalvinFoodWars
         Buff buff;
         ItemsShop item;
         Players players;
-        public FormShop(Players player)
+        public FormShop()
         {
             InitializeComponent();
-            players = player;
         }
 
         private void labelDisplayFreeze_Click(object sender, EventArgs e)
