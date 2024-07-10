@@ -16,6 +16,7 @@ namespace CalvinFoodWars
         Buff buff;
         ItemsShop item;
         Players players;
+       
         public FormShop()
         {
             InitializeComponent();
@@ -46,6 +47,13 @@ namespace CalvinFoodWars
         private void FormShop_Load(object sender, EventArgs e)
         {
             form = (FormMenu)this.Owner;
+            comboBoxPlayers.DataSource = form.listPlayer;
+            comboBoxPlayers.DisplayMember = "Name";
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

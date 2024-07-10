@@ -16,6 +16,7 @@ namespace CalvinFoodWars
     public partial class FormMenu : Form
     {
         #region Declarations
+        public List<FormMenu> listPlayer = new List<FormMenu>();
         Players player;
         Players displayCurrent;
         Time recordedTime;
@@ -38,12 +39,6 @@ namespace CalvinFoodWars
         WindowsMediaPlayer sound1 = new WindowsMediaPlayer();
         WindowsMediaPlayer sound2 = new WindowsMediaPlayer();
   
-        public FormMenu(Players players)
-        {
-            InitializeComponent();
-            if(temp2 > 0)
-                player = players;
-        }
         public FormMenu()
         {
             InitializeComponent();

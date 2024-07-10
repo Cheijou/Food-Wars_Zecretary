@@ -45,6 +45,8 @@
             this.buttonBuyFreeze = new System.Windows.Forms.Button();
             this.labelNameFreeze = new System.Windows.Forms.Label();
             this.pictureBoxFreeze = new System.Windows.Forms.PictureBox();
+            this.labelCurrency = new System.Windows.Forms.Label();
+            this.comboBoxPlayers = new System.Windows.Forms.ComboBox();
             this.panelBoost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -73,7 +75,7 @@
             this.panelBoost.Controls.Add(this.button1);
             this.panelBoost.Controls.Add(this.labelNameBoost);
             this.panelBoost.Controls.Add(this.pictureBox6);
-            this.panelBoost.Location = new System.Drawing.Point(269, 11);
+            this.panelBoost.Location = new System.Drawing.Point(318, 51);
             this.panelBoost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelBoost.Name = "panelBoost";
             this.panelBoost.Size = new System.Drawing.Size(200, 342);
@@ -86,9 +88,9 @@
             this.labelBoostRemaining.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelBoostRemaining.Location = new System.Drawing.Point(51, 308);
             this.labelBoostRemaining.Name = "labelBoostRemaining";
-            this.labelBoostRemaining.Size = new System.Drawing.Size(90, 20);
+            this.labelBoostRemaining.Size = new System.Drawing.Size(81, 20);
             this.labelBoostRemaining.TabIndex = 31;
-            this.labelBoostRemaining.Text = "labelFreeze";
+            this.labelBoostRemaining.Text = "labelBoost";
             // 
             // pictureBox4
             // 
@@ -108,9 +110,9 @@
             this.labelDescBoost.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescBoost.Location = new System.Drawing.Point(51, 246);
             this.labelDescBoost.Name = "labelDescBoost";
-            this.labelDescBoost.Size = new System.Drawing.Size(90, 20);
+            this.labelDescBoost.Size = new System.Drawing.Size(81, 20);
             this.labelDescBoost.TabIndex = 5;
-            this.labelDescBoost.Text = "labelFreeze";
+            this.labelDescBoost.Text = "labelBoost";
             // 
             // labelPriceBoost
             // 
@@ -168,7 +170,7 @@
             this.panelFreeze.Controls.Add(this.buttonBuyFreeze);
             this.panelFreeze.Controls.Add(this.labelNameFreeze);
             this.panelFreeze.Controls.Add(this.pictureBoxFreeze);
-            this.panelFreeze.Location = new System.Drawing.Point(34, 11);
+            this.panelFreeze.Location = new System.Drawing.Point(33, 51);
             this.panelFreeze.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelFreeze.Name = "panelFreeze";
             this.panelFreeze.Size = new System.Drawing.Size(200, 342);
@@ -253,12 +255,32 @@
             this.pictureBoxFreeze.TabIndex = 0;
             this.pictureBoxFreeze.TabStop = false;
             // 
+            // labelCurrency
+            // 
+            this.labelCurrency.AutoSize = true;
+            this.labelCurrency.Location = new System.Drawing.Point(609, 13);
+            this.labelCurrency.Name = "labelCurrency";
+            this.labelCurrency.Size = new System.Drawing.Size(90, 16);
+            this.labelCurrency.TabIndex = 35;
+            this.labelCurrency.Text = "labelCurrency";
+            // 
+            // comboBoxPlayers
+            // 
+            this.comboBoxPlayers.FormattingEnabled = true;
+            this.comboBoxPlayers.Location = new System.Drawing.Point(33, 13);
+            this.comboBoxPlayers.Name = "comboBoxPlayers";
+            this.comboBoxPlayers.Size = new System.Drawing.Size(149, 24);
+            this.comboBoxPlayers.TabIndex = 36;
+            this.comboBoxPlayers.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // FormShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
             this.ClientSize = new System.Drawing.Size(757, 652);
+            this.Controls.Add(this.comboBoxPlayers);
+            this.Controls.Add(this.labelCurrency);
             this.Controls.Add(this.panelFreeze);
             this.Controls.Add(this.panelBoost);
             this.Controls.Add(this.buttonExit);
@@ -274,6 +296,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFreeze)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -295,5 +318,7 @@
         private System.Windows.Forms.Button buttonBuyFreeze;
         private System.Windows.Forms.Label labelNameFreeze;
         private System.Windows.Forms.PictureBox pictureBoxFreeze;
+        private System.Windows.Forms.Label labelCurrency;
+        private System.Windows.Forms.ComboBox comboBoxPlayers;
     }
 }
