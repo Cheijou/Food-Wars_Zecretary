@@ -386,5 +386,14 @@
   <ItemGroup>
     <None Include="Resources\ZetaMerchPicture.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boostEffect.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\freezeEffect.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\efekBoost.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
