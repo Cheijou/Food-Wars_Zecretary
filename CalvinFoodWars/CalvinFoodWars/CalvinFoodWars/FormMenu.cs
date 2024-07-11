@@ -73,8 +73,17 @@ namespace CalvinFoodWars
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            StartMenu();
-            displayCurrent = new Players(null, 0, null, new Time());
+            if (listPlayer.Count == 0)
+            {
+                FormCreatePlayer formCreate = new FormCreatePlayer();
+                formCreate.Owner = this;
+                formCreate.ShowDialog();
+            }
+            else
+            {
+                StartMenu();
+                displayCurrent = new Players(null, 0, null, new Time());
+            }
         }
         private void NewGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
