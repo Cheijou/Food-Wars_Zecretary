@@ -599,7 +599,19 @@ namespace CalvinFoodWars
                 sound2.URL = tempFile;
                 sound2.controls.play();
             }
-           
+            else if (type == "freeze")
+            {
+                tempFile = Path.GetTempFileName() + ".mp3";
+                //File.
+                //sound3
+            }
+            else if (type == "boost")
+            {
+                tempFile = Path.GetTempFileName() + ".mp3";
+                //File.
+                //sound3
+            }
+
         }
         #endregion
 
