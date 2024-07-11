@@ -38,6 +38,51 @@
             this.labelTime = new System.Windows.Forms.Label();
             this.labelSuccess = new System.Windows.Forms.Label();
             this.labelFailed = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelPriceBurger = new System.Windows.Forms.Label();
+            this.labelPriceSalad = new System.Windows.Forms.Label();
+            this.labelPriceIceCream = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.labelmcold = new System.Windows.Forms.Label();
+            this.labellcold = new System.Windows.Forms.Label();
+            this.labelscold = new System.Windows.Forms.Label();
+            this.labellhot = new System.Windows.Forms.Label();
+            this.labelmhot = new System.Windows.Forms.Label();
+            this.labelshot = new System.Windows.Forms.Label();
+            this.labelzmerchprice = new System.Windows.Forms.Label();
+            this.labelztumprice = new System.Windows.Forms.Label();
+            this.labelpluprice = new System.Windows.Forms.Label();
+            this.labeltumprice = new System.Windows.Forms.Label();
+            this.pictureBoxUndoPrice1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNextPrice3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxiszmerch = new System.Windows.Forms.PictureBox();
+            this.pictureBoxisztum = new System.Windows.Forms.PictureBox();
+            this.pictureBoxistum = new System.Windows.Forms.PictureBox();
+            this.pictureBoxismerch = new System.Windows.Forms.PictureBox();
+            this.pictureBoxztum = new System.Windows.Forms.PictureBox();
+            this.pictureBoxzmerch = new System.Windows.Forms.PictureBox();
+            this.pictureBoxplushie = new System.Windows.Forms.PictureBox();
+            this.pictureBoxtumbler = new System.Windows.Forms.PictureBox();
+            this.pictureBoxishot = new System.Windows.Forms.PictureBox();
+            this.pictureBoxismhot = new System.Windows.Forms.PictureBox();
+            this.pictureBoxislhot = new System.Windows.Forms.PictureBox();
+            this.pictureBoxisscold = new System.Windows.Forms.PictureBox();
+            this.pictureBoxismcold = new System.Windows.Forms.PictureBox();
+            this.pictureBoxislcold = new System.Windows.Forms.PictureBox();
+            this.pictureBoxshot = new System.Windows.Forms.PictureBox();
+            this.pictureBoxmhot = new System.Windows.Forms.PictureBox();
+            this.pictureBoxlhot = new System.Windows.Forms.PictureBox();
+            this.pictureBoxlcold = new System.Windows.Forms.PictureBox();
+            this.pictureBoxmcold = new System.Windows.Forms.PictureBox();
+            this.pictureBoxscold = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNextPrice2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxis3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxis2 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxis1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFoodIceCream = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFoodSalad = new System.Windows.Forms.PictureBox();
+            this.pictureBoxFoodBurger = new System.Windows.Forms.PictureBox();
             this.pictureBoxUndoComp2 = new System.Windows.Forms.PictureBox();
             this.pictureBoxSuccess = new System.Windows.Forms.PictureBox();
             this.pictureBoxFailed = new System.Windows.Forms.PictureBox();
@@ -86,6 +131,37 @@
             this.pictureBoxButtomPan = new System.Windows.Forms.PictureBox();
             this.pictureBoxPlate = new System.Windows.Forms.PictureBox();
             this.pictureBoxRecipeBurger = new System.Windows.Forms.PictureBox();
+            this.pictureBoxUndoPrice2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndoPrice1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNextPrice3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxiszmerch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxisztum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxistum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxismerch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxztum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxzmerch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplushie)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtumbler)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxishot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxismhot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxislhot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxisscold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxismcold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxislcold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxshot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxmhot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlhot)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlcold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxmcold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxscold)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNextPrice2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxis3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxis2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxis1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoodIceCream)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoodSalad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoodBurger)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndoComp2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSuccess)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailed)).BeginInit();
@@ -134,6 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtomPan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecipeBurger)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndoPrice2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelGuide
@@ -181,7 +258,7 @@
             this.labelTrue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTrue.Location = new System.Drawing.Point(956, 254);
             this.labelTrue.Name = "labelTrue";
-            this.labelTrue.Size = new System.Drawing.Size(54, 22);
+            this.labelTrue.Size = new System.Drawing.Size(63, 22);
             this.labelTrue.TabIndex = 94;
             this.labelTrue.Text = "TRUE";
             // 
@@ -190,7 +267,7 @@
             this.labelWrong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelWrong.Location = new System.Drawing.Point(956, 349);
             this.labelWrong.Name = "labelWrong";
-            this.labelWrong.Size = new System.Drawing.Size(81, 22);
+            this.labelWrong.Size = new System.Drawing.Size(90, 22);
             this.labelWrong.TabIndex = 95;
             this.labelWrong.Text = "WRONG";
             // 
@@ -232,6 +309,457 @@
             this.labelFailed.Size = new System.Drawing.Size(96, 29);
             this.labelFailed.TabIndex = 101;
             this.labelFailed.Text = "FAILED";
+            this.labelFailed.Click += new System.EventHandler(this.labelFailed_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(871, 80);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 16);
+            this.label1.TabIndex = 112;
+            // 
+            // labelPriceBurger
+            // 
+            this.labelPriceBurger.AutoSize = true;
+            this.labelPriceBurger.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPriceBurger.Location = new System.Drawing.Point(676, 199);
+            this.labelPriceBurger.Name = "labelPriceBurger";
+            this.labelPriceBurger.Size = new System.Drawing.Size(94, 32);
+            this.labelPriceBurger.TabIndex = 113;
+            this.labelPriceBurger.Text = "50000";
+            // 
+            // labelPriceSalad
+            // 
+            this.labelPriceSalad.AutoSize = true;
+            this.labelPriceSalad.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPriceSalad.Location = new System.Drawing.Point(674, 312);
+            this.labelPriceSalad.Name = "labelPriceSalad";
+            this.labelPriceSalad.Size = new System.Drawing.Size(94, 32);
+            this.labelPriceSalad.TabIndex = 114;
+            this.labelPriceSalad.Text = "25000";
+            // 
+            // labelPriceIceCream
+            // 
+            this.labelPriceIceCream.AutoSize = true;
+            this.labelPriceIceCream.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPriceIceCream.Location = new System.Drawing.Point(675, 410);
+            this.labelPriceIceCream.Name = "labelPriceIceCream";
+            this.labelPriceIceCream.Size = new System.Drawing.Size(94, 32);
+            this.labelPriceIceCream.TabIndex = 115;
+            this.labelPriceIceCream.Text = "10000";
+            // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Comic Sans MS", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPrice.Location = new System.Drawing.Point(551, 63);
+            this.labelPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(118, 45);
+            this.labelPrice.TabIndex = 117;
+            this.labelPrice.Text = "PRICE";
+            // 
+            // labelmcold
+            // 
+            this.labelmcold.AutoSize = true;
+            this.labelmcold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelmcold.Location = new System.Drawing.Point(505, 304);
+            this.labelmcold.Name = "labelmcold";
+            this.labelmcold.Size = new System.Drawing.Size(94, 32);
+            this.labelmcold.TabIndex = 130;
+            this.labelmcold.Text = "20000";
+            // 
+            // labellcold
+            // 
+            this.labellcold.AutoSize = true;
+            this.labellcold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellcold.Location = new System.Drawing.Point(505, 202);
+            this.labellcold.Name = "labellcold";
+            this.labellcold.Size = new System.Drawing.Size(94, 32);
+            this.labellcold.TabIndex = 131;
+            this.labellcold.Text = "25000";
+            // 
+            // labelscold
+            // 
+            this.labelscold.AutoSize = true;
+            this.labelscold.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelscold.Location = new System.Drawing.Point(507, 410);
+            this.labelscold.Name = "labelscold";
+            this.labelscold.Size = new System.Drawing.Size(94, 32);
+            this.labelscold.TabIndex = 132;
+            this.labelscold.Text = "15000";
+            // 
+            // labellhot
+            // 
+            this.labellhot.AutoSize = true;
+            this.labellhot.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labellhot.Location = new System.Drawing.Point(816, 214);
+            this.labellhot.Name = "labellhot";
+            this.labellhot.Size = new System.Drawing.Size(94, 32);
+            this.labellhot.TabIndex = 133;
+            this.labellhot.Text = "25000";
+            // 
+            // labelmhot
+            // 
+            this.labelmhot.AutoSize = true;
+            this.labelmhot.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelmhot.Location = new System.Drawing.Point(816, 316);
+            this.labelmhot.Name = "labelmhot";
+            this.labelmhot.Size = new System.Drawing.Size(94, 32);
+            this.labelmhot.TabIndex = 134;
+            this.labelmhot.Text = "20000";
+            // 
+            // labelshot
+            // 
+            this.labelshot.AutoSize = true;
+            this.labelshot.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelshot.Location = new System.Drawing.Point(816, 410);
+            this.labelshot.Name = "labelshot";
+            this.labelshot.Size = new System.Drawing.Size(94, 32);
+            this.labelshot.TabIndex = 135;
+            this.labelshot.Text = "15000";
+            // 
+            // labelzmerchprice
+            // 
+            this.labelzmerchprice.AutoSize = true;
+            this.labelzmerchprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelzmerchprice.Location = new System.Drawing.Point(507, 299);
+            this.labelzmerchprice.Name = "labelzmerchprice";
+            this.labelzmerchprice.Size = new System.Drawing.Size(110, 32);
+            this.labelzmerchprice.TabIndex = 144;
+            this.labelzmerchprice.Text = "100000";
+            // 
+            // labelztumprice
+            // 
+            this.labelztumprice.AutoSize = true;
+            this.labelztumprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelztumprice.Location = new System.Drawing.Point(505, 204);
+            this.labelztumprice.Name = "labelztumprice";
+            this.labelztumprice.Size = new System.Drawing.Size(94, 32);
+            this.labelztumprice.TabIndex = 145;
+            this.labelztumprice.Text = "75000";
+            // 
+            // labelpluprice
+            // 
+            this.labelpluprice.AutoSize = true;
+            this.labelpluprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelpluprice.Location = new System.Drawing.Point(816, 216);
+            this.labelpluprice.Name = "labelpluprice";
+            this.labelpluprice.Size = new System.Drawing.Size(94, 32);
+            this.labelpluprice.TabIndex = 146;
+            this.labelpluprice.Text = "20000";
+            // 
+            // labeltumprice
+            // 
+            this.labeltumprice.AutoSize = true;
+            this.labeltumprice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeltumprice.Location = new System.Drawing.Point(816, 315);
+            this.labeltumprice.Name = "labeltumprice";
+            this.labeltumprice.Size = new System.Drawing.Size(94, 32);
+            this.labeltumprice.TabIndex = 147;
+            this.labeltumprice.Text = "30000";
+            // 
+            // pictureBoxUndoPrice1
+            // 
+            this.pictureBoxUndoPrice1.BackgroundImage = global::CalvinFoodWars.Properties.Resources.undo;
+            this.pictureBoxUndoPrice1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxUndoPrice1.Location = new System.Drawing.Point(79, 487);
+            this.pictureBoxUndoPrice1.Name = "pictureBoxUndoPrice1";
+            this.pictureBoxUndoPrice1.Size = new System.Drawing.Size(100, 85);
+            this.pictureBoxUndoPrice1.TabIndex = 149;
+            this.pictureBoxUndoPrice1.TabStop = false;
+            this.pictureBoxUndoPrice1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxUndoPrice1_MouseClick);
+            // 
+            // pictureBoxNextPrice3
+            // 
+            this.pictureBoxNextPrice3.BackgroundImage = global::CalvinFoodWars.Properties.Resources.next;
+            this.pictureBoxNextPrice3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxNextPrice3.Location = new System.Drawing.Point(960, 487);
+            this.pictureBoxNextPrice3.Name = "pictureBoxNextPrice3";
+            this.pictureBoxNextPrice3.Size = new System.Drawing.Size(100, 85);
+            this.pictureBoxNextPrice3.TabIndex = 148;
+            this.pictureBoxNextPrice3.TabStop = false;
+            this.pictureBoxNextPrice3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxNextPrice3_MouseClick);
+            // 
+            // pictureBoxiszmerch
+            // 
+            this.pictureBoxiszmerch.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxiszmerch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxiszmerch.Location = new System.Drawing.Point(437, 288);
+            this.pictureBoxiszmerch.Name = "pictureBoxiszmerch";
+            this.pictureBoxiszmerch.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxiszmerch.TabIndex = 143;
+            this.pictureBoxiszmerch.TabStop = false;
+            // 
+            // pictureBoxisztum
+            // 
+            this.pictureBoxisztum.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxisztum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxisztum.Location = new System.Drawing.Point(437, 189);
+            this.pictureBoxisztum.Name = "pictureBoxisztum";
+            this.pictureBoxisztum.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxisztum.TabIndex = 142;
+            this.pictureBoxisztum.TabStop = false;
+            // 
+            // pictureBoxistum
+            // 
+            this.pictureBoxistum.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxistum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxistum.Location = new System.Drawing.Point(737, 301);
+            this.pictureBoxistum.Name = "pictureBoxistum";
+            this.pictureBoxistum.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxistum.TabIndex = 141;
+            this.pictureBoxistum.TabStop = false;
+            // 
+            // pictureBoxismerch
+            // 
+            this.pictureBoxismerch.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxismerch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxismerch.Location = new System.Drawing.Point(737, 199);
+            this.pictureBoxismerch.Name = "pictureBoxismerch";
+            this.pictureBoxismerch.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxismerch.TabIndex = 140;
+            this.pictureBoxismerch.TabStop = false;
+            // 
+            // pictureBoxztum
+            // 
+            this.pictureBoxztum.BackgroundImage = global::CalvinFoodWars.Properties.Resources.ZetaMerchPicture;
+            this.pictureBoxztum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxztum.Location = new System.Drawing.Point(342, 182);
+            this.pictureBoxztum.Name = "pictureBoxztum";
+            this.pictureBoxztum.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxztum.TabIndex = 139;
+            this.pictureBoxztum.TabStop = false;
+            // 
+            // pictureBoxzmerch
+            // 
+            this.pictureBoxzmerch.BackgroundImage = global::CalvinFoodWars.Properties.Resources.ZetaTumblerPicture;
+            this.pictureBoxzmerch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxzmerch.Location = new System.Drawing.Point(342, 279);
+            this.pictureBoxzmerch.Name = "pictureBoxzmerch";
+            this.pictureBoxzmerch.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxzmerch.TabIndex = 138;
+            this.pictureBoxzmerch.TabStop = false;
+            // 
+            // pictureBoxplushie
+            // 
+            this.pictureBoxplushie.BackgroundImage = global::CalvinFoodWars.Properties.Resources.plushie;
+            this.pictureBoxplushie.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxplushie.Location = new System.Drawing.Point(633, 179);
+            this.pictureBoxplushie.Name = "pictureBoxplushie";
+            this.pictureBoxplushie.Size = new System.Drawing.Size(85, 83);
+            this.pictureBoxplushie.TabIndex = 137;
+            this.pictureBoxplushie.TabStop = false;
+            // 
+            // pictureBoxtumbler
+            // 
+            this.pictureBoxtumbler.BackgroundImage = global::CalvinFoodWars.Properties.Resources.tumbler;
+            this.pictureBoxtumbler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxtumbler.Location = new System.Drawing.Point(642, 288);
+            this.pictureBoxtumbler.Name = "pictureBoxtumbler";
+            this.pictureBoxtumbler.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxtumbler.TabIndex = 136;
+            this.pictureBoxtumbler.TabStop = false;
+            // 
+            // pictureBoxishot
+            // 
+            this.pictureBoxishot.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxishot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxishot.Location = new System.Drawing.Point(737, 397);
+            this.pictureBoxishot.Name = "pictureBoxishot";
+            this.pictureBoxishot.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxishot.TabIndex = 129;
+            this.pictureBoxishot.TabStop = false;
+            // 
+            // pictureBoxismhot
+            // 
+            this.pictureBoxismhot.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxismhot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxismhot.Location = new System.Drawing.Point(737, 303);
+            this.pictureBoxismhot.Name = "pictureBoxismhot";
+            this.pictureBoxismhot.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxismhot.TabIndex = 128;
+            this.pictureBoxismhot.TabStop = false;
+            // 
+            // pictureBoxislhot
+            // 
+            this.pictureBoxislhot.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxislhot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxislhot.Location = new System.Drawing.Point(736, 199);
+            this.pictureBoxislhot.Name = "pictureBoxislhot";
+            this.pictureBoxislhot.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxislhot.TabIndex = 127;
+            this.pictureBoxislhot.TabStop = false;
+            // 
+            // pictureBoxisscold
+            // 
+            this.pictureBoxisscold.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxisscold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxisscold.Location = new System.Drawing.Point(437, 397);
+            this.pictureBoxisscold.Name = "pictureBoxisscold";
+            this.pictureBoxisscold.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxisscold.TabIndex = 126;
+            this.pictureBoxisscold.TabStop = false;
+            // 
+            // pictureBoxismcold
+            // 
+            this.pictureBoxismcold.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxismcold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxismcold.Location = new System.Drawing.Point(437, 289);
+            this.pictureBoxismcold.Name = "pictureBoxismcold";
+            this.pictureBoxismcold.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxismcold.TabIndex = 125;
+            this.pictureBoxismcold.TabStop = false;
+            // 
+            // pictureBoxislcold
+            // 
+            this.pictureBoxislcold.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxislcold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxislcold.Location = new System.Drawing.Point(437, 187);
+            this.pictureBoxislcold.Name = "pictureBoxislcold";
+            this.pictureBoxislcold.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxislcold.TabIndex = 124;
+            this.pictureBoxislcold.TabStop = false;
+            // 
+            // pictureBoxshot
+            // 
+            this.pictureBoxshot.BackgroundImage = global::CalvinFoodWars.Properties.Resources.coffee_S_hot;
+            this.pictureBoxshot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxshot.Location = new System.Drawing.Point(642, 389);
+            this.pictureBoxshot.Name = "pictureBoxshot";
+            this.pictureBoxshot.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxshot.TabIndex = 123;
+            this.pictureBoxshot.TabStop = false;
+            // 
+            // pictureBoxmhot
+            // 
+            this.pictureBoxmhot.BackgroundImage = global::CalvinFoodWars.Properties.Resources.coffee_M_hot;
+            this.pictureBoxmhot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxmhot.Location = new System.Drawing.Point(642, 288);
+            this.pictureBoxmhot.Name = "pictureBoxmhot";
+            this.pictureBoxmhot.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxmhot.TabIndex = 122;
+            this.pictureBoxmhot.TabStop = false;
+            // 
+            // pictureBoxlhot
+            // 
+            this.pictureBoxlhot.BackgroundImage = global::CalvinFoodWars.Properties.Resources.coffee_L_hot;
+            this.pictureBoxlhot.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxlhot.Location = new System.Drawing.Point(642, 182);
+            this.pictureBoxlhot.Name = "pictureBoxlhot";
+            this.pictureBoxlhot.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxlhot.TabIndex = 121;
+            this.pictureBoxlhot.TabStop = false;
+            // 
+            // pictureBoxlcold
+            // 
+            this.pictureBoxlcold.BackgroundImage = global::CalvinFoodWars.Properties.Resources.coffee_L_cold;
+            this.pictureBoxlcold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxlcold.Location = new System.Drawing.Point(342, 179);
+            this.pictureBoxlcold.Name = "pictureBoxlcold";
+            this.pictureBoxlcold.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxlcold.TabIndex = 120;
+            this.pictureBoxlcold.TabStop = false;
+            // 
+            // pictureBoxmcold
+            // 
+            this.pictureBoxmcold.BackgroundImage = global::CalvinFoodWars.Properties.Resources.coffee_M_cold;
+            this.pictureBoxmcold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxmcold.Location = new System.Drawing.Point(342, 277);
+            this.pictureBoxmcold.Name = "pictureBoxmcold";
+            this.pictureBoxmcold.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxmcold.TabIndex = 119;
+            this.pictureBoxmcold.TabStop = false;
+            // 
+            // pictureBoxscold
+            // 
+            this.pictureBoxscold.BackgroundImage = global::CalvinFoodWars.Properties.Resources.coffee_S_cold;
+            this.pictureBoxscold.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxscold.Location = new System.Drawing.Point(342, 389);
+            this.pictureBoxscold.Name = "pictureBoxscold";
+            this.pictureBoxscold.Size = new System.Drawing.Size(63, 83);
+            this.pictureBoxscold.TabIndex = 118;
+            this.pictureBoxscold.TabStop = false;
+            // 
+            // pictureBoxNextPrice2
+            // 
+            this.pictureBoxNextPrice2.BackgroundImage = global::CalvinFoodWars.Properties.Resources.next;
+            this.pictureBoxNextPrice2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxNextPrice2.Location = new System.Drawing.Point(960, 487);
+            this.pictureBoxNextPrice2.Name = "pictureBoxNextPrice2";
+            this.pictureBoxNextPrice2.Size = new System.Drawing.Size(100, 85);
+            this.pictureBoxNextPrice2.TabIndex = 116;
+            this.pictureBoxNextPrice2.TabStop = false;
+            this.pictureBoxNextPrice2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxNextPrice2_MouseClick);
+            // 
+            // pictureBoxis3
+            // 
+            this.pictureBoxis3.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxis3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxis3.Location = new System.Drawing.Point(591, 397);
+            this.pictureBoxis3.Name = "pictureBoxis3";
+            this.pictureBoxis3.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxis3.TabIndex = 111;
+            this.pictureBoxis3.TabStop = false;
+            // 
+            // pictureBoxis2
+            // 
+            this.pictureBoxis2.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxis2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxis2.Location = new System.Drawing.Point(591, 301);
+            this.pictureBoxis2.Name = "pictureBoxis2";
+            this.pictureBoxis2.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxis2.TabIndex = 110;
+            this.pictureBoxis2.TabStop = false;
+            // 
+            // pictureBoxis1
+            // 
+            this.pictureBoxis1.BackgroundImage = global::CalvinFoodWars.Properties.Resources.equal;
+            this.pictureBoxis1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxis1.Location = new System.Drawing.Point(591, 187);
+            this.pictureBoxis1.Name = "pictureBoxis1";
+            this.pictureBoxis1.Size = new System.Drawing.Size(56, 59);
+            this.pictureBoxis1.TabIndex = 109;
+            this.pictureBoxis1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(784, 76);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(8, 8);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBoxFoodIceCream
+            // 
+            this.pictureBoxFoodIceCream.BackgroundImage = global::CalvinFoodWars.Properties.Resources.icecream;
+            this.pictureBoxFoodIceCream.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFoodIceCream.Location = new System.Drawing.Point(490, 390);
+            this.pictureBoxFoodIceCream.Name = "pictureBoxFoodIceCream";
+            this.pictureBoxFoodIceCream.Size = new System.Drawing.Size(66, 83);
+            this.pictureBoxFoodIceCream.TabIndex = 108;
+            this.pictureBoxFoodIceCream.TabStop = false;
+            // 
+            // pictureBoxFoodSalad
+            // 
+            this.pictureBoxFoodSalad.BackgroundImage = global::CalvinFoodWars.Properties.Resources.salad;
+            this.pictureBoxFoodSalad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFoodSalad.Location = new System.Drawing.Point(476, 271);
+            this.pictureBoxFoodSalad.Name = "pictureBoxFoodSalad";
+            this.pictureBoxFoodSalad.Size = new System.Drawing.Size(80, 83);
+            this.pictureBoxFoodSalad.TabIndex = 107;
+            this.pictureBoxFoodSalad.TabStop = false;
+            // 
+            // pictureBoxFoodBurger
+            // 
+            this.pictureBoxFoodBurger.BackgroundImage = global::CalvinFoodWars.Properties.Resources.burger;
+            this.pictureBoxFoodBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxFoodBurger.Location = new System.Drawing.Point(476, 179);
+            this.pictureBoxFoodBurger.Name = "pictureBoxFoodBurger";
+            this.pictureBoxFoodBurger.Size = new System.Drawing.Size(80, 83);
+            this.pictureBoxFoodBurger.TabIndex = 106;
+            this.pictureBoxFoodBurger.TabStop = false;
             // 
             // pictureBoxUndoComp2
             // 
@@ -249,7 +777,7 @@
             // 
             this.pictureBoxSuccess.BackgroundImage = global::CalvinFoodWars.Properties.Resources.Success;
             this.pictureBoxSuccess.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxSuccess.Location = new System.Drawing.Point(322, 252);
+            this.pictureBoxSuccess.Location = new System.Drawing.Point(316, 254);
             this.pictureBoxSuccess.Name = "pictureBoxSuccess";
             this.pictureBoxSuccess.Size = new System.Drawing.Size(269, 122);
             this.pictureBoxSuccess.TabIndex = 99;
@@ -269,7 +797,7 @@
             // 
             this.pictureBoxDisplay.BackgroundImage = global::CalvinFoodWars.Properties.Resources.Food_Wars_28_06_2024_19_06_32;
             this.pictureBoxDisplay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxDisplay.Location = new System.Drawing.Point(513, 214);
+            this.pictureBoxDisplay.Location = new System.Drawing.Point(567, 214);
             this.pictureBoxDisplay.Name = "pictureBoxDisplay";
             this.pictureBoxDisplay.Size = new System.Drawing.Size(180, 210);
             this.pictureBoxDisplay.TabIndex = 93;
@@ -464,6 +992,7 @@
             this.pictureBoxPrice.Size = new System.Drawing.Size(246, 67);
             this.pictureBoxPrice.TabIndex = 73;
             this.pictureBoxPrice.TabStop = false;
+            this.pictureBoxPrice.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxPrice_MouseClick);
             // 
             // pictureBoxRecipe
             // 
@@ -761,12 +1290,69 @@
             this.pictureBoxRecipeBurger.TabIndex = 45;
             this.pictureBoxRecipeBurger.TabStop = false;
             // 
+            // pictureBoxUndoPrice2
+            // 
+            this.pictureBoxUndoPrice2.BackgroundImage = global::CalvinFoodWars.Properties.Resources.undo;
+            this.pictureBoxUndoPrice2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxUndoPrice2.Location = new System.Drawing.Point(80, 487);
+            this.pictureBoxUndoPrice2.Name = "pictureBoxUndoPrice2";
+            this.pictureBoxUndoPrice2.Size = new System.Drawing.Size(100, 85);
+            this.pictureBoxUndoPrice2.TabIndex = 150;
+            this.pictureBoxUndoPrice2.TabStop = false;
+            this.pictureBoxUndoPrice2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBoxUndoPrice2_MouseClick);
+            // 
             // FormGuide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1133, 617);
+            this.Controls.Add(this.pictureBoxUndoPrice2);
+            this.Controls.Add(this.pictureBoxUndoPrice1);
+            this.Controls.Add(this.pictureBoxNextPrice3);
+            this.Controls.Add(this.labeltumprice);
+            this.Controls.Add(this.labelpluprice);
+            this.Controls.Add(this.labelztumprice);
+            this.Controls.Add(this.labelzmerchprice);
+            this.Controls.Add(this.pictureBoxiszmerch);
+            this.Controls.Add(this.pictureBoxisztum);
+            this.Controls.Add(this.pictureBoxistum);
+            this.Controls.Add(this.pictureBoxismerch);
+            this.Controls.Add(this.pictureBoxztum);
+            this.Controls.Add(this.pictureBoxzmerch);
+            this.Controls.Add(this.pictureBoxplushie);
+            this.Controls.Add(this.pictureBoxtumbler);
+            this.Controls.Add(this.labelshot);
+            this.Controls.Add(this.labelmhot);
+            this.Controls.Add(this.labellhot);
+            this.Controls.Add(this.labelscold);
+            this.Controls.Add(this.labellcold);
+            this.Controls.Add(this.labelmcold);
+            this.Controls.Add(this.pictureBoxishot);
+            this.Controls.Add(this.pictureBoxismhot);
+            this.Controls.Add(this.pictureBoxislhot);
+            this.Controls.Add(this.pictureBoxisscold);
+            this.Controls.Add(this.pictureBoxismcold);
+            this.Controls.Add(this.pictureBoxislcold);
+            this.Controls.Add(this.pictureBoxshot);
+            this.Controls.Add(this.pictureBoxmhot);
+            this.Controls.Add(this.pictureBoxlhot);
+            this.Controls.Add(this.pictureBoxlcold);
+            this.Controls.Add(this.pictureBoxmcold);
+            this.Controls.Add(this.pictureBoxscold);
+            this.Controls.Add(this.labelPrice);
+            this.Controls.Add(this.pictureBoxNextPrice2);
+            this.Controls.Add(this.labelPriceIceCream);
+            this.Controls.Add(this.labelPriceSalad);
+            this.Controls.Add(this.labelPriceBurger);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBoxis3);
+            this.Controls.Add(this.pictureBoxis2);
+            this.Controls.Add(this.pictureBoxis1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxFoodIceCream);
+            this.Controls.Add(this.pictureBoxFoodSalad);
+            this.Controls.Add(this.pictureBoxFoodBurger);
             this.Controls.Add(this.pictureBoxUndoComp2);
             this.Controls.Add(this.labelFailed);
             this.Controls.Add(this.labelSuccess);
@@ -828,6 +1414,36 @@
             this.Name = "FormGuide";
             this.Text = "FormGuide";
             this.Load += new System.EventHandler(this.Recipe_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndoPrice1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNextPrice3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxiszmerch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxisztum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxistum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxismerch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxztum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxzmerch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxplushie)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxtumbler)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxishot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxismhot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxislhot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxisscold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxismcold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxislcold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxshot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxmhot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlhot)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxlcold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxmcold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxscold)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNextPrice2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxis3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxis2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxis1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoodIceCream)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoodSalad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFoodBurger)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndoComp2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSuccess)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxFailed)).EndInit();
@@ -876,6 +1492,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxButtomPan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecipeBurger)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUndoPrice2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -941,5 +1558,51 @@
         private System.Windows.Forms.Label labelSuccess;
         private System.Windows.Forms.Label labelFailed;
         private System.Windows.Forms.PictureBox pictureBoxUndoComp2;
+        private System.Windows.Forms.PictureBox pictureBoxFoodBurger;
+        private System.Windows.Forms.PictureBox pictureBoxFoodSalad;
+        private System.Windows.Forms.PictureBox pictureBoxFoodIceCream;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxis1;
+        private System.Windows.Forms.PictureBox pictureBoxis2;
+        private System.Windows.Forms.PictureBox pictureBoxis3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelPriceBurger;
+        private System.Windows.Forms.Label labelPriceSalad;
+        private System.Windows.Forms.Label labelPriceIceCream;
+        private System.Windows.Forms.PictureBox pictureBoxNextPrice2;
+        private System.Windows.Forms.Label labelPrice;
+        private System.Windows.Forms.PictureBox pictureBoxscold;
+        private System.Windows.Forms.PictureBox pictureBoxmcold;
+        private System.Windows.Forms.PictureBox pictureBoxlcold;
+        private System.Windows.Forms.PictureBox pictureBoxlhot;
+        private System.Windows.Forms.PictureBox pictureBoxmhot;
+        private System.Windows.Forms.PictureBox pictureBoxshot;
+        private System.Windows.Forms.PictureBox pictureBoxislcold;
+        private System.Windows.Forms.PictureBox pictureBoxismcold;
+        private System.Windows.Forms.PictureBox pictureBoxisscold;
+        private System.Windows.Forms.PictureBox pictureBoxislhot;
+        private System.Windows.Forms.PictureBox pictureBoxismhot;
+        private System.Windows.Forms.PictureBox pictureBoxishot;
+        private System.Windows.Forms.Label labelmcold;
+        private System.Windows.Forms.Label labellcold;
+        private System.Windows.Forms.Label labelscold;
+        private System.Windows.Forms.Label labellhot;
+        private System.Windows.Forms.Label labelmhot;
+        private System.Windows.Forms.Label labelshot;
+        private System.Windows.Forms.PictureBox pictureBoxtumbler;
+        private System.Windows.Forms.PictureBox pictureBoxplushie;
+        private System.Windows.Forms.PictureBox pictureBoxzmerch;
+        private System.Windows.Forms.PictureBox pictureBoxztum;
+        private System.Windows.Forms.PictureBox pictureBoxismerch;
+        private System.Windows.Forms.PictureBox pictureBoxistum;
+        private System.Windows.Forms.PictureBox pictureBoxisztum;
+        private System.Windows.Forms.PictureBox pictureBoxiszmerch;
+        private System.Windows.Forms.Label labelzmerchprice;
+        private System.Windows.Forms.Label labelztumprice;
+        private System.Windows.Forms.Label labelpluprice;
+        private System.Windows.Forms.Label labeltumprice;
+        private System.Windows.Forms.PictureBox pictureBoxNextPrice3;
+        private System.Windows.Forms.PictureBox pictureBoxUndoPrice1;
+        private System.Windows.Forms.PictureBox pictureBoxUndoPrice2;
     }
 }

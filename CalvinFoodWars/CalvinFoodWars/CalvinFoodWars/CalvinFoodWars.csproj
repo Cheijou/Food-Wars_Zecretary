@@ -374,5 +374,17 @@
   <ItemGroup>
     <None Include="Resources\efekFreeze.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZetaMerchPict.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZetaTumblerPict.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZetaTumblerPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ZetaMerchPicture.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

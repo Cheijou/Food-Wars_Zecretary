@@ -29,6 +29,9 @@ namespace CalvinFoodWars
             composition1false();
             composition2false();
             composition3false();
+            price1false();
+            price2false();
+            price3false();
         }
         private void formguide()
         {
@@ -37,6 +40,7 @@ namespace CalvinFoodWars
             pictureBoxRecipe.Visible = true;
             pictureBoxExit.Visible = true;
             pictureBoxPrice.Visible = true;
+            
         }
         #region Recipe
         private void backbutton()
@@ -49,6 +53,9 @@ namespace CalvinFoodWars
             pictureBoxNextComp2.Visible = false;
             pictureBoxUndoComp1.Visible = false;
             pictureBoxNextComp3.Visible = false;
+            pictureBoxNextRecipe2.Visible = false;
+            //
+
            
         }
      
@@ -260,6 +267,8 @@ namespace CalvinFoodWars
         {
             pictureBoxBack.Visible = false;
             labelGuide.Visible = true;
+            //
+            labelPrice.Visible = false;
             formguide();
             recipeburgerfalse();
             recipesaladfalse();
@@ -267,6 +276,9 @@ namespace CalvinFoodWars
             composition1false();
             composition2false();
             composition3false();
+            price1false();
+            price2false();
+            price3false();
         }
 
         private void pictureBoxHowtoplay_MouseClick(object sender, MouseEventArgs e)
@@ -276,6 +288,131 @@ namespace CalvinFoodWars
             composition1true();
             
         }
+
+        private void price1true()
+        {
+            pictureBoxFoodBurger.Visible = true;
+            pictureBoxFoodIceCream.Visible = true;
+            pictureBoxFoodSalad.Visible = true;
+            pictureBoxNextRecipe2.Visible = true;
+            labelPriceBurger.Visible = true;
+            labelPriceIceCream.Visible = true;
+            labelPriceSalad.Visible = true;
+            pictureBoxis1.Visible = true;
+            pictureBoxis2.Visible = true;
+            pictureBoxis3.Visible = true;
+            pictureBoxNextPrice2.Visible = true;
+            labelPrice.Visible = true;
+        }
+
+        private void price1false()
+        {
+            pictureBoxFoodBurger.Visible = false;
+            pictureBoxFoodIceCream.Visible = false;
+            pictureBoxFoodSalad.Visible = false;
+            pictureBoxNextRecipe2.Visible = false;
+            labelPriceBurger.Visible = false;
+            labelPriceIceCream.Visible = false;
+            labelPriceSalad.Visible = false;
+            pictureBoxis1.Visible = false;
+            pictureBoxis2.Visible = false;
+            pictureBoxis3.Visible = false;
+            pictureBoxNextPrice2.Visible = false;
+            
+            
+        }
+
+        private void price2false()
+        {
+            labellhot.Visible = false;
+            labelmhot.Visible = false;
+            labelshot.Visible = false;
+            labellcold.Visible =false;
+            labelmcold.Visible = false;
+            labelscold.Visible = false;
+            pictureBoxscold.Visible = false;
+            pictureBoxmcold.Visible = false;
+            pictureBoxlcold.Visible = false;
+            pictureBoxmhot.Visible = false;
+            pictureBoxlhot.Visible = false;
+            pictureBoxshot.Visible = false;
+            pictureBoxismhot.Visible = false;
+            pictureBoxislhot.Visible = false;
+            pictureBoxishot.Visible = false;
+            pictureBoxislcold.Visible = false;
+            pictureBoxisscold.Visible = false;
+            pictureBoxismcold.Visible = false;
+            pictureBoxNextPrice3.Visible = false;
+            pictureBoxUndoPrice1.Visible = false;
+        }
+
+
+        private void price2true()
+        {
+            labellhot.Visible = true;
+            labelmhot.Visible = true;
+            labelshot.Visible = true;
+            labellcold.Visible = true;
+            labelmcold.Visible = true;
+            labelscold.Visible = true;
+            pictureBoxscold.Visible = true;
+            pictureBoxmcold.Visible = true;
+            pictureBoxlcold.Visible = true;
+            pictureBoxmhot.Visible = true;
+            pictureBoxlhot.Visible = true;
+            pictureBoxshot.Visible = true;
+            pictureBoxismhot.Visible = true;
+            pictureBoxislhot.Visible = true;
+            pictureBoxishot.Visible = true;
+            pictureBoxislcold.Visible = true;
+            pictureBoxisscold.Visible = true;
+            pictureBoxismcold.Visible = true;
+            pictureBoxNextPrice3.Visible = true;
+            pictureBoxUndoPrice1.Visible = true;
+
+        }
+
+        private void price3true()
+        {
+            pictureBoxzmerch.Visible = true;
+            pictureBoxztum.Visible = true;
+            pictureBoxtumbler.Visible = true;
+            pictureBoxplushie.Visible = true;
+            pictureBoxiszmerch.Visible = true;
+            pictureBoxisztum.Visible = true;
+            pictureBoxistum.Visible = true;
+            pictureBoxiszmerch.Visible = true;
+            pictureBoxismerch.Visible = true;
+            pictureBoxtumbler.Visible = true;
+            pictureBoxplushie.Visible = true;
+            labelzmerchprice.Visible = true;
+            labelztumprice.Visible = true;
+            labelpluprice.Visible = true;
+            labeltumprice.Visible = true;
+            pictureBoxUndoPrice2.Visible = true;
+
+        }
+
+        private void price3false()
+        {
+            pictureBoxzmerch.Visible = false;
+            pictureBoxztum.Visible = false;
+            pictureBoxtumbler.Visible = false;
+            pictureBoxplushie.Visible = false;
+            pictureBoxiszmerch.Visible = false;
+            pictureBoxisztum.Visible = false;
+            pictureBoxistum.Visible = false;
+            pictureBoxiszmerch.Visible = false;
+            pictureBoxismerch.Visible = false;
+            pictureBoxtumbler.Visible = false;
+            pictureBoxplushie.Visible = false;
+            labelzmerchprice.Visible = false;
+            labelztumprice.Visible = false;
+            labelpluprice.Visible = false;
+            labeltumprice.Visible = false;
+            pictureBoxUndoPrice2.Visible =false;
+        }
+
 
         private void pictureBoxExit_MouseClick(object sender, MouseEventArgs e)
         {
@@ -319,5 +456,40 @@ namespace CalvinFoodWars
             composition2true();
         }
 
+        private void labelFailed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxNextPrice2_MouseClick(object sender, MouseEventArgs e)
+        {
+            price1false();
+            price2true();
+        }
+
+        private void pictureBoxPrice_MouseClick(object sender, MouseEventArgs e)
+        {
+            labelGuide.Visible = false;
+            price1true();
+            formfalse();
+        }
+
+        private void pictureBoxUndoPrice1_MouseClick(object sender, MouseEventArgs e)
+        {
+            price2false();
+            price1true();
+        }
+
+        private void pictureBoxNextPrice3_MouseClick(object sender, MouseEventArgs e)
+        {
+            price3true();
+            price2false();
+        }
+
+        private void pictureBoxUndoPrice2_MouseClick(object sender, MouseEventArgs e)
+        {
+            price3false();
+            price2true();
+        }
     }
 }
