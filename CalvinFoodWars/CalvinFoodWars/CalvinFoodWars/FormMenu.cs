@@ -17,12 +17,11 @@ namespace CalvinFoodWars
     {
         #region Declarations
         public List<Players> listPlayer = new List<Players>();
-        Players player ;
+        public Players player;
         Players displayCurrent;
         Time recordedTime;
         Time remainingTime;
         Customers customer;
-        Items item;
         public Buff boost = new Buff("boost", 100000, Properties.Resources.doublemoney);
         public Buff freeze = new Buff("freeze", 50000, Properties.Resources.freeze);
         private int selectedIngCount = 0;

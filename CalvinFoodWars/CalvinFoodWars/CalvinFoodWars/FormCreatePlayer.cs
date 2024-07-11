@@ -14,7 +14,7 @@ namespace CalvinFoodWars
     public partial class FormCreatePlayer : Form
     {
         FormMenu formMain;
-        public Players player;
+        public Players newPlayer;
         public Time recordedTime;
         public FormCreatePlayer()
         {
@@ -24,6 +24,7 @@ namespace CalvinFoodWars
         private void FormCreatePlayer_Load(object sender, EventArgs e)
         {
             formMain = (FormMenu)this.Owner;
+            pictureBoxPlayer.Image = Properties.Resources.player;
         }
         private void CreatePlayer()
         {
@@ -35,8 +36,9 @@ namespace CalvinFoodWars
             //labelCurrentIncome.Text = "Prev Income: " + incomePerGame.ToString();
             //pictureBoxPlayer.Image = player.Picture; \
             recordedTime = new Time();
-            player = new Players(textBoxName.Text, 0, pictureBoxPlayer.Image, recordedTime);
-            formMain.listPlayer.Add(player);
+            newPlayer = new Players(textBoxName.Text, 0, pictureBoxPlayer.Image, recordedTime);
+            formMain.listPlayer.Add(newPlayer);
+            formMain.player = newPlayer;    
             //formMain.SaveToFilePlayers(formMain.playerFileName);
             this.Close();
         }
@@ -48,6 +50,29 @@ namespace CalvinFoodWars
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxPlayer.Image = new Bitmap(openFileDialog.FileName);
+            }
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (pictureBoxPlayer.Image == Properties.Resources.player)
+                {
+                    var result = MessageBox.Show("Set the profile picture to default?", "Profile picture not set", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        CreatePlayer();
+                    }
+                }
+                else if (pictureBoxPlayer.Image != Properties.Resources.player) 
+                {
+                    CreatePlayer();
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

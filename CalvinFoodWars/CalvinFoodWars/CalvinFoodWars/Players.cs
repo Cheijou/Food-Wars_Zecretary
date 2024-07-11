@@ -29,8 +29,23 @@ namespace CalvinFoodWars
         #endregion
 
         #region Properties
-        public string Name { get => name; set => name = value; }
-        public int Income { 
+        public string Name 
+        { 
+            get => name; 
+            set
+            {
+                if (value != "")
+                {
+                    name = value;
+                }
+                else
+                {
+                    throw new Exception("Please input your name/username.");
+                }
+            }
+        }
+        public int Income 
+        { 
             get => income;
             set
             {

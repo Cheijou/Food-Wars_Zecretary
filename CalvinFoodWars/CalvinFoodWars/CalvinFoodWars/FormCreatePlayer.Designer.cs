@@ -46,6 +46,7 @@
             this.buttonAdd.TabIndex = 23;
             this.buttonAdd.Text = "Create Player";
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // pictureBoxPlayer
             // 
