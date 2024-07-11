@@ -852,12 +852,12 @@ namespace CalvinFoodWars
 
         private void pictureBoxFreeze_Click(object sender, EventArgs e)
         {
-            shops.freeze.Stock--;
+            freeze.Stock--;
         }
 
         private void pictureBoxBoost_Click(object sender, EventArgs e)
         {
-            shops.boost.Stock--;
+            boost.Stock--;
         }
     }
 }
