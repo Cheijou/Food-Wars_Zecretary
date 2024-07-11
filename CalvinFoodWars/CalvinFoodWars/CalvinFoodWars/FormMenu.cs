@@ -53,6 +53,7 @@ namespace CalvinFoodWars
         Random random = new Random();
         WindowsMediaPlayer sound1 = new WindowsMediaPlayer();
         WindowsMediaPlayer sound2 = new WindowsMediaPlayer();
+        WindowsMediaPlayer sound3 = new WindowsMediaPlayer();
         bool boostActivated;
             
   
@@ -602,14 +603,16 @@ namespace CalvinFoodWars
             else if (type == "freeze")
             {
                 tempFile = Path.GetTempFileName() + ".mp3";
-                //File.
-                //sound3
+                File.WriteAllBytes(tempFile, Properties.Resources.freezeEffect);
+                sound3.URL = tempFile;
+                sound3.controls.play();
             }
             else if (type == "boost")
             {
                 tempFile = Path.GetTempFileName() + ".mp3";
-                //File.
-                //sound3
+                File.WriteAllBytes(tempFile, Properties.Resources.boostEffect);
+                sound3.URL = tempFile;
+                sound3.controls.play();
             }
 
         }
@@ -956,12 +959,14 @@ namespace CalvinFoodWars
                 timerFreeze.Start();
                 timerGame.Stop();
                 timerCd.Start();
+                PlaySound("freeze");
                 labelSisaBoost.Text = boost.Stock.ToString() + "x";
                 labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
                 pictureBoxFreeze.Image = Properties.Resources.freezeDis;
                 pictureBoxBoost.Image = Properties.Resources.moneyDis;
                 pictureBoxFreeze.Enabled = false;
                 pictureBoxBoost.Enabled = false;
+
             }
             catch(Exception ex)
             {
@@ -977,6 +982,7 @@ namespace CalvinFoodWars
                 {
                     pictureBoxBoost.Image = Properties.Resources.moneyDis;
                 }
+                BackgroundImage = Properties.Resources.efekBoost;
                 timerBoost.Interval = 1000;
                 timerCd.Interval = 1000;
                 timerBoost.Start();
@@ -984,6 +990,7 @@ namespace CalvinFoodWars
                 boostActivated = true;
                 boostTime = new Time(0, 0, 10);
                 powerCooldown = new Time(0, 0, 10);
+                PlaySound("boost");
                 labelSisaBoost.Text = boost.Stock.ToString() + "x";
                 labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
                 pictureBoxFreeze.Image = Properties.Resources.freezeDis;
