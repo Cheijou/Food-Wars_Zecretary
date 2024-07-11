@@ -120,6 +120,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormShop.resx">
       <DependentUpon>FormShop.cs</DependentUpon>
@@ -369,6 +370,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\copyright-28781.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\efekFreeze.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

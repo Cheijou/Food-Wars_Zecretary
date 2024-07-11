@@ -19,12 +19,15 @@ namespace CalvinFoodWars
         #region Declarations
         public List<Players> listPlayer = new List<Players>();
         FormCreatePlayer registeredPlayer;
-        Players player;
         public string playerFileName = "player.dat";
         Players displayCurrent;
         Time recordedTime;
         Time remainingTime;
+        Time powerCooldown;
+        Time freezeTime;
+        Time boostTime;
         Customers customer;
+        public Players player;
         public Buff boost = new Buff("boost", 100000, Properties.Resources.doublemoney);
         public Buff freeze = new Buff("freeze", 50000, Properties.Resources.freeze);
         //public Skin merchZeta = new Skin("merchZeta", 10000, kasih gambar merch zeta);
@@ -50,6 +53,8 @@ namespace CalvinFoodWars
         Random random = new Random();
         WindowsMediaPlayer sound1 = new WindowsMediaPlayer();
         WindowsMediaPlayer sound2 = new WindowsMediaPlayer();
+        bool boostActivated = false;
+            
   
         public FormMenu()
         {
@@ -104,6 +109,7 @@ namespace CalvinFoodWars
         }
         private void NewGame()
         {
+            timerActual.Start();
             this.Size = new Size(865, 644);
             remainingCustomer = 10;
             Merchandise merch;
@@ -173,7 +179,14 @@ namespace CalvinFoodWars
         private void CreatePlayer()
         {
             player = new Players(playerName, currentIncome, playerPicture, recordedTime);
-            listPlayer.Add(player);
+            if (listPlayer.Count == 0)
+            {
+                listPlayer.Add(player);
+            }
+            else
+            {
+                listPlayer[0] = player;
+            }
             labelName.Text = player.DisplayName();
             labelIncome.Text = player.DisplayIncome();
             labelPrevTime.Text = displayCurrent.DisplayTime();
@@ -418,12 +431,20 @@ namespace CalvinFoodWars
         {
             PlaySound("correct");
             panelNotif.Visible = true;
-            labelNotif.Text = "+" + customer.Item.Price;
             pictureBoxServedItem.Visible = true;
             pictureBoxServedItem.Image = customer.Item.Picture;
             pictureBoxServedItem.Tag = "done";
             pictureBoxOrderedItem.Image = Properties.Resources.money;
-            incomePerGame = player.AddWithPrice(incomePerGame,customer.Item.Price);
+            if (boostActivated == true)
+            {
+                incomePerGame = player.AddWithPrice(incomePerGame, (2*customer.Item.Price));
+                labelNotif.Text = "+" + (2*customer.Item.Price) + " (boosted!!!)";
+            }
+            else
+            {
+                incomePerGame = player.AddWithPrice(incomePerGame, customer.Item.Price);
+                labelNotif.Text = "+" + customer.Item.Price;
+            }
             selectedIngCount = 0;
             remainingCustomer--;
             labelRemainingCust.Text = "Remaining Customers : " + remainingCustomer;
@@ -475,14 +496,19 @@ namespace CalvinFoodWars
         private void ShowGameOverDialog()
         {
             //lose
+            
             if (remainingTime.Hour == 0 && remainingTime.Minute == 0 && remainingTime.Second == 0)
             {
+                timerActual.Stop();
+                timerFreeze.Stop();
+                timerBoost.Stop();
                 PlaySound("lose");
                 timerGame.Stop();
                 timerCustomer.Stop();
                 timerDelay.Stop();
                 incomePerGame = 0;
                 currentIncome = player.Income;
+                
                 var result = MessageBox.Show("Time is up, you lost all your income in this try.\nDo you want to try again?","Game Over",MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes) 
                 {
@@ -498,6 +524,9 @@ namespace CalvinFoodWars
             //win
             if (remainingCustomer == 0)
             {
+                timerActual.Stop();
+                timerFreeze.Stop();
+                timerBoost.Stop();
                 PlaySound("win");
                 player.AddIncome(incomePerGame);
                 currentIncome = player.Income;
@@ -898,6 +927,7 @@ namespace CalvinFoodWars
         #endregion
 
         #region Use Power Ups
+        
         private void pictureBoxFreeze_Click(object sender, EventArgs e)
         {
             try
@@ -907,8 +937,21 @@ namespace CalvinFoodWars
                 {
                     pictureBoxFreeze.Image = Properties.Resources.freezeDis;
                 }
+                BackgroundImage = Properties.Resources.efekFreeze;
+                timerFreeze.Interval = 1000;
+                freezeTime = new Time(0, 0, 7);
+                timerFreeze.Start();
+                
+                timerGame.Stop();
                 labelSisaBoost.Text = boost.Stock.ToString() + "x";
                 labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
+                pictureBoxFreeze.Image = Properties.Resources.freezeDis;
+                pictureBoxBoost.Image = Properties.Resources.moneyDis;
+                pictureBoxFreeze.Enabled = false;
+                pictureBoxBoost.Enabled = false;
+                powerCooldown = new Time(0, 0, 10);
+                timerCd.Interval = 1000;
+                timerCd.Start();
             }
             catch(Exception ex)
             {
@@ -925,9 +968,19 @@ namespace CalvinFoodWars
                 {
                     pictureBoxBoost.Image = Properties.Resources.moneyDis;
                 }
-
+                timerBoost.Interval = 1000;
+                timerBoost.Start();
+                boostActivated = true;
+                boostTime = new Time(0, 0, 10);
                 labelSisaBoost.Text = boost.Stock.ToString() + "x";
                 labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
+                pictureBoxFreeze.Image = Properties.Resources.freezeDis;
+                pictureBoxBoost.Image = Properties.Resources.moneyDis;
+                pictureBoxFreeze.Enabled = false;
+                pictureBoxBoost.Enabled = false;
+                powerCooldown = new Time(0, 0, 10);
+                timerCd.Interval = 1000;
+                timerCd.Start();
             }
             catch (Exception ex) 
             {
@@ -936,6 +989,28 @@ namespace CalvinFoodWars
         }
         #endregion
 
+        private void timerFreeze_Tick(object sender, EventArgs e)
+        {
+            freezeTime.Add(-1);
+            
+            if (freezeTime.Second == 0)
+            {
+                timerGame.Start();
+                timerFreeze.Stop();
+                BackgroundImage = null;
+            }
+        }
+        private void timerBoost_Tick(object sender, EventArgs e)
+        {
+            boostTime.Add(-1);
+            
+            if(boostTime.Second == 0)
+            {
+                timerBoost.Stop();
+                boostActivated = false;
+                BackgroundImage = null;
+            }
+        }
         private void buttonBuyFreeze_Click(object sender, EventArgs e)
         {
 
@@ -944,11 +1019,6 @@ namespace CalvinFoodWars
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             StartMenu();
-            
-        }
-
-        private void timerFreeze_Tick(object sender, EventArgs e)
-        {
             
         }
         #region Credits
@@ -963,5 +1033,43 @@ namespace CalvinFoodWars
 
         }
         #endregion
+
+        private void timerCd_Tick(object sender, EventArgs e)
+        {
+            powerCooldown.Add(-1);
+           
+            if (powerCooldown.Second == 0)
+            {
+                timerCd.Stop();
+                pictureBoxFreeze.Image = Properties.Resources.freeze;
+                pictureBoxBoost.Image = Properties.Resources.doublemoney;
+                if(freeze.Stock == 0)
+                {
+            
+                    pictureBoxFreeze.Image = Properties.Resources.freezeDis;
+                }
+                else
+                {
+                    pictureBoxBoost.Image = Properties.Resources.moneyDis;
+                }
+                pictureBoxFreeze.Enabled = true;
+                pictureBoxBoost.Enabled = true;
+            }
+        }
+
+        private void panelStall_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelNotif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timerActual_Tick(object sender, EventArgs e)
+        {
+            ShowGameOverDialog();
+        }
     }
 }
