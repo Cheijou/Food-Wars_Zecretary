@@ -59,9 +59,11 @@
             // 
             // buttonExit
             // 
-            this.buttonExit.Location = new System.Drawing.Point(620, 582);
+            this.buttonExit.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonExit.Location = new System.Drawing.Point(465, 473);
+            this.buttonExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(111, 43);
+            this.buttonExit.Size = new System.Drawing.Size(83, 35);
             this.buttonExit.TabIndex = 4;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -77,10 +79,10 @@
             this.panelBoost.Controls.Add(this.buttonBuyBoost);
             this.panelBoost.Controls.Add(this.labelNameBoost);
             this.panelBoost.Controls.Add(this.pictureBox6);
-            this.panelBoost.Location = new System.Drawing.Point(318, 51);
-            this.panelBoost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelBoost.Location = new System.Drawing.Point(238, 41);
+            this.panelBoost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelBoost.Name = "panelBoost";
-            this.panelBoost.Size = new System.Drawing.Size(200, 342);
+            this.panelBoost.Size = new System.Drawing.Size(150, 278);
             this.panelBoost.TabIndex = 33;
             // 
             // labelBoostRemaining
@@ -88,9 +90,10 @@
             this.labelBoostRemaining.AutoSize = true;
             this.labelBoostRemaining.BackColor = System.Drawing.Color.Transparent;
             this.labelBoostRemaining.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBoostRemaining.Location = new System.Drawing.Point(51, 308);
+            this.labelBoostRemaining.Location = new System.Drawing.Point(38, 250);
+            this.labelBoostRemaining.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBoostRemaining.Name = "labelBoostRemaining";
-            this.labelBoostRemaining.Size = new System.Drawing.Size(81, 20);
+            this.labelBoostRemaining.Size = new System.Drawing.Size(66, 17);
             this.labelBoostRemaining.TabIndex = 31;
             this.labelBoostRemaining.Text = "labelBoost";
             this.labelBoostRemaining.Click += new System.EventHandler(this.labelBoostRemaining_Click);
@@ -98,10 +101,10 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::CalvinFoodWars.Properties.Resources.money;
-            this.pictureBox4.Location = new System.Drawing.Point(41, 213);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Location = new System.Drawing.Point(31, 173);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox4.Size = new System.Drawing.Size(25, 25);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 30;
             this.pictureBox4.TabStop = false;
@@ -111,9 +114,10 @@
             this.labelDescBoost.AutoSize = true;
             this.labelDescBoost.BackColor = System.Drawing.Color.White;
             this.labelDescBoost.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescBoost.Location = new System.Drawing.Point(27, 246);
+            this.labelDescBoost.Location = new System.Drawing.Point(20, 200);
+            this.labelDescBoost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescBoost.Name = "labelDescBoost";
-            this.labelDescBoost.Size = new System.Drawing.Size(81, 20);
+            this.labelDescBoost.Size = new System.Drawing.Size(66, 17);
             this.labelDescBoost.TabIndex = 5;
             this.labelDescBoost.Text = "labelBoost";
             // 
@@ -122,19 +126,20 @@
             this.labelPriceBoost.AutoSize = true;
             this.labelPriceBoost.BackColor = System.Drawing.Color.White;
             this.labelPriceBoost.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPriceBoost.Location = new System.Drawing.Point(80, 219);
+            this.labelPriceBoost.Location = new System.Drawing.Point(60, 178);
+            this.labelPriceBoost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPriceBoost.Name = "labelPriceBoost";
-            this.labelPriceBoost.Size = new System.Drawing.Size(61, 20);
+            this.labelPriceBoost.Size = new System.Drawing.Size(48, 17);
             this.labelPriceBoost.TabIndex = 4;
             this.labelPriceBoost.Text = "100000";
             // 
             // buttonBuyBoost
             // 
             this.buttonBuyBoost.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuyBoost.Location = new System.Drawing.Point(59, 187);
-            this.buttonBuyBoost.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuyBoost.Location = new System.Drawing.Point(44, 152);
+            this.buttonBuyBoost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuyBoost.Name = "buttonBuyBoost";
-            this.buttonBuyBoost.Size = new System.Drawing.Size(80, 28);
+            this.buttonBuyBoost.Size = new System.Drawing.Size(60, 23);
             this.buttonBuyBoost.TabIndex = 3;
             this.buttonBuyBoost.Text = "Buy";
             this.buttonBuyBoost.UseVisualStyleBackColor = true;
@@ -145,9 +150,10 @@
             this.labelNameBoost.AutoSize = true;
             this.labelNameBoost.BackColor = System.Drawing.Color.White;
             this.labelNameBoost.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameBoost.Location = new System.Drawing.Point(51, 156);
+            this.labelNameBoost.Location = new System.Drawing.Point(38, 127);
+            this.labelNameBoost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNameBoost.Name = "labelNameBoost";
-            this.labelNameBoost.Size = new System.Drawing.Size(97, 20);
+            this.labelNameBoost.Size = new System.Drawing.Size(78, 17);
             this.labelNameBoost.TabIndex = 1;
             this.labelNameBoost.Text = "Money Boost";
             // 
@@ -156,10 +162,10 @@
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::CalvinFoodWars.Properties.Resources.doublemoney;
-            this.pictureBox6.Location = new System.Drawing.Point(13, 11);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(10, 9);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(177, 159);
+            this.pictureBox6.Size = new System.Drawing.Size(133, 129);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
@@ -174,10 +180,10 @@
             this.panelFreeze.Controls.Add(this.buttonBuyFreeze);
             this.panelFreeze.Controls.Add(this.labelNameFreeze);
             this.panelFreeze.Controls.Add(this.pictureBoxFreeze);
-            this.panelFreeze.Location = new System.Drawing.Point(33, 51);
-            this.panelFreeze.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelFreeze.Location = new System.Drawing.Point(25, 41);
+            this.panelFreeze.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelFreeze.Name = "panelFreeze";
-            this.panelFreeze.Size = new System.Drawing.Size(200, 342);
+            this.panelFreeze.Size = new System.Drawing.Size(150, 278);
             this.panelFreeze.TabIndex = 34;
             // 
             // labelFrRem
@@ -185,19 +191,20 @@
             this.labelFrRem.AutoSize = true;
             this.labelFrRem.BackColor = System.Drawing.Color.Transparent;
             this.labelFrRem.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFrRem.Location = new System.Drawing.Point(51, 308);
+            this.labelFrRem.Location = new System.Drawing.Point(38, 250);
+            this.labelFrRem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelFrRem.Name = "labelFrRem";
-            this.labelFrRem.Size = new System.Drawing.Size(90, 20);
+            this.labelFrRem.Size = new System.Drawing.Size(71, 17);
             this.labelFrRem.TabIndex = 31;
             this.labelFrRem.Text = "labelFreeze";
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::CalvinFoodWars.Properties.Resources.money;
-            this.pictureBox5.Location = new System.Drawing.Point(41, 213);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox5.Location = new System.Drawing.Point(31, 173);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 31);
+            this.pictureBox5.Size = new System.Drawing.Size(25, 25);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 30;
             this.pictureBox5.TabStop = false;
@@ -207,9 +214,10 @@
             this.labelDescFreeze.AutoSize = true;
             this.labelDescFreeze.BackColor = System.Drawing.Color.White;
             this.labelDescFreeze.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDescFreeze.Location = new System.Drawing.Point(37, 246);
+            this.labelDescFreeze.Location = new System.Drawing.Point(28, 200);
+            this.labelDescFreeze.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDescFreeze.Name = "labelDescFreeze";
-            this.labelDescFreeze.Size = new System.Drawing.Size(90, 20);
+            this.labelDescFreeze.Size = new System.Drawing.Size(71, 17);
             this.labelDescFreeze.TabIndex = 5;
             this.labelDescFreeze.Text = "labelFreeze";
             // 
@@ -218,19 +226,20 @@
             this.labelPriceFreeze.AutoSize = true;
             this.labelPriceFreeze.BackColor = System.Drawing.Color.White;
             this.labelPriceFreeze.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPriceFreeze.Location = new System.Drawing.Point(80, 219);
+            this.labelPriceFreeze.Location = new System.Drawing.Point(60, 178);
+            this.labelPriceFreeze.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPriceFreeze.Name = "labelPriceFreeze";
-            this.labelPriceFreeze.Size = new System.Drawing.Size(54, 20);
+            this.labelPriceFreeze.Size = new System.Drawing.Size(43, 17);
             this.labelPriceFreeze.TabIndex = 4;
             this.labelPriceFreeze.Text = "50000";
             // 
             // buttonBuyFreeze
             // 
             this.buttonBuyFreeze.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuyFreeze.Location = new System.Drawing.Point(59, 187);
-            this.buttonBuyFreeze.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuyFreeze.Location = new System.Drawing.Point(44, 152);
+            this.buttonBuyFreeze.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuyFreeze.Name = "buttonBuyFreeze";
-            this.buttonBuyFreeze.Size = new System.Drawing.Size(80, 28);
+            this.buttonBuyFreeze.Size = new System.Drawing.Size(60, 23);
             this.buttonBuyFreeze.TabIndex = 3;
             this.buttonBuyFreeze.Text = "Buy";
             this.buttonBuyFreeze.UseVisualStyleBackColor = true;
@@ -241,9 +250,10 @@
             this.labelNameFreeze.AutoSize = true;
             this.labelNameFreeze.BackColor = System.Drawing.Color.White;
             this.labelNameFreeze.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNameFreeze.Location = new System.Drawing.Point(51, 156);
+            this.labelNameFreeze.Location = new System.Drawing.Point(38, 127);
+            this.labelNameFreeze.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNameFreeze.Name = "labelNameFreeze";
-            this.labelNameFreeze.Size = new System.Drawing.Size(94, 20);
+            this.labelNameFreeze.Size = new System.Drawing.Size(75, 17);
             this.labelNameFreeze.TabIndex = 1;
             this.labelNameFreeze.Text = "Time Freeze";
             // 
@@ -252,10 +262,10 @@
             this.pictureBoxFreeze.BackColor = System.Drawing.Color.Turquoise;
             this.pictureBoxFreeze.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxFreeze.Image = global::CalvinFoodWars.Properties.Resources.freeze;
-            this.pictureBoxFreeze.Location = new System.Drawing.Point(13, 11);
-            this.pictureBoxFreeze.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBoxFreeze.Location = new System.Drawing.Point(10, 9);
+            this.pictureBoxFreeze.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBoxFreeze.Name = "pictureBoxFreeze";
-            this.pictureBoxFreeze.Size = new System.Drawing.Size(177, 159);
+            this.pictureBoxFreeze.Size = new System.Drawing.Size(133, 129);
             this.pictureBoxFreeze.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxFreeze.TabIndex = 0;
             this.pictureBoxFreeze.TabStop = false;
@@ -263,18 +273,21 @@
             // labelCurrency
             // 
             this.labelCurrency.AutoSize = true;
-            this.labelCurrency.Location = new System.Drawing.Point(609, 13);
+            this.labelCurrency.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCurrency.Location = new System.Drawing.Point(416, 11);
+            this.labelCurrency.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCurrency.Name = "labelCurrency";
-            this.labelCurrency.Size = new System.Drawing.Size(90, 16);
+            this.labelCurrency.Size = new System.Drawing.Size(113, 23);
             this.labelCurrency.TabIndex = 35;
             this.labelCurrency.Text = "labelCurrency";
             // 
             // comboBoxPlayers
             // 
             this.comboBoxPlayers.FormattingEnabled = true;
-            this.comboBoxPlayers.Location = new System.Drawing.Point(33, 13);
+            this.comboBoxPlayers.Location = new System.Drawing.Point(25, 11);
+            this.comboBoxPlayers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxPlayers.Name = "comboBoxPlayers";
-            this.comboBoxPlayers.Size = new System.Drawing.Size(149, 24);
+            this.comboBoxPlayers.Size = new System.Drawing.Size(113, 21);
             this.comboBoxPlayers.TabIndex = 36;
             this.comboBoxPlayers.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -284,17 +297,19 @@
             // 
             // FormShop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(757, 652);
+            this.ClientSize = new System.Drawing.Size(568, 530);
             this.Controls.Add(this.comboBoxPlayers);
             this.Controls.Add(this.labelCurrency);
             this.Controls.Add(this.panelFreeze);
             this.Controls.Add(this.panelBoost);
             this.Controls.Add(this.buttonExit);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormShop";
             this.Text = "FormShop";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormShop_FormClosing);
             this.Load += new System.EventHandler(this.FormShop_Load);
             this.panelBoost.ResumeLayout(false);
             this.panelBoost.PerformLayout();

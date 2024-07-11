@@ -17,7 +17,7 @@ namespace CalvinFoodWars
     {
         #region Declarations
         public List<Players> listPlayer = new List<Players>();
-        Players player;
+        Players player ;
         Players displayCurrent;
         Time recordedTime;
         Time remainingTime;
@@ -31,10 +31,7 @@ namespace CalvinFoodWars
         private int delayTime = 0;
         private int incomePerGame = 0;
         public int currentIncome = 0;
-        int boostStock = 0;
-        int freezeStock = 0;
         int temp2 = 0;
-        FormShop shops;
         //untuk mengganti stok dan inisialisasi
         Merchandise tumbler;
         Merchandise plushie;
@@ -88,8 +85,6 @@ namespace CalvinFoodWars
             this.Size = new Size(865, 644);
             remainingCustomer = 10;
             Merchandise merch;
-            freezeStock = freeze.Stock;
-            boostStock = boost.Stock;
             incomePerGame = 0;
             merch = new Merchandise(null, null, 0);
             merch.ResetStock();
@@ -115,7 +110,7 @@ namespace CalvinFoodWars
             pictureBoxPlayer.Visible = true;
             panelShop.Visible = false;
             panelBuff.Visible = true;
-            if (boostStock == 0)
+            if (boost.Stock == 0)
             {
                 pictureBoxBoost.Image = Properties.Resources.moneyDis;
             }
@@ -123,7 +118,7 @@ namespace CalvinFoodWars
             {
                 pictureBoxBoost.Image = Properties.Resources.doublemoney;
             }
-            if (freezeStock == 0)
+            if (freeze.Stock == 0)
             {
                 pictureBoxFreeze.Image = Properties.Resources.freezeDis;
             }
@@ -804,9 +799,16 @@ namespace CalvinFoodWars
         #region shop
         private void pictureBoxShop_MouseClick(object sender, MouseEventArgs e)
         {
-            FormShop form = new FormShop();
-            form.Owner = this;
-            form.ShowDialog();
+            if (listPlayer.Count > 0)
+            {
+                FormShop form = new FormShop();
+                form.Owner = this;
+                form.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You must create a player first before accessing shop.");
+            }
         }
         #endregion
 
@@ -853,11 +855,20 @@ namespace CalvinFoodWars
         private void pictureBoxFreeze_Click(object sender, EventArgs e)
         {
             freeze.Stock--;
+            if (freeze.Stock == 0)
+            {
+                pictureBoxFreeze.Image = Properties.Resources.freezeDis;
+            }
+
         }
 
         private void pictureBoxBoost_Click(object sender, EventArgs e)
         {
             boost.Stock--;
+            if (boost.Stock == 0)
+            {
+                pictureBoxBoost.Image = Properties.Resources.moneyDis;
+            }
         }
     }
 }

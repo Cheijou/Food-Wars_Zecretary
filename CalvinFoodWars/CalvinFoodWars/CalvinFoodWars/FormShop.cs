@@ -37,6 +37,7 @@ namespace CalvinFoodWars
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            form.currentIncome = players.Income;
         }
 
         private void FormShop_Load(object sender, EventArgs e)
@@ -50,12 +51,14 @@ namespace CalvinFoodWars
             labelPriceFreeze.Text = freeze.Price.ToString();
             labelDescBoost.Text = boost.Display();
             labelDescFreeze.Text = freeze.Display();
+            labelFrRem.Text = freeze.Stock.ToString();
+            labelBoostRemaining.Text = boost.Stock.ToString();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             players = (Players)comboBoxPlayers.SelectedItem;
-            labelCurrency.Text = players.Income.ToString();
+            labelCurrency.Text = "Income : "+players.Income.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -66,8 +69,7 @@ namespace CalvinFoodWars
                 int income = players.Income;
                 players.Income = boost.Sell(income);
                 labelBoostRemaining.Text = boost.Stock.ToString();
-                labelCurrency.Text = players.Income.ToString();
-                form.currentIncome = players.Income;
+                labelCurrency.Text = "Income : " + players.Income.ToString();
             }
             catch(Exception ex)
             {
@@ -83,7 +85,7 @@ namespace CalvinFoodWars
                 int income = players.Income;
                 players.Income = freeze.Sell(income);
                 labelFrRem.Text = freeze.Stock.ToString();
-                labelCurrency.Text = players.Income.ToString();
+                labelCurrency.Text = "Income : " + players.Income.ToString();
                 form.currentIncome = income;
             }
             catch (Exception ex)
@@ -100,6 +102,11 @@ namespace CalvinFoodWars
         private void timer1_Tick(object sender, EventArgs e)
         {
           
+        }
+
+        private void FormShop_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            form.currentIncome = players.Income;
         }
     }
 }
