@@ -882,6 +882,8 @@ namespace CalvinFoodWars
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StartMenu();
+            timerGame.Stop();
+            remainingTime = new Time(0, 0, 40);
         }
 
         #endregion
@@ -942,6 +944,7 @@ namespace CalvinFoodWars
         private void pictureBoxBack_Click(object sender, EventArgs e)
         {
             StartMenu();
+            
         }
 
         private void timerFreeze_Tick(object sender, EventArgs e)
