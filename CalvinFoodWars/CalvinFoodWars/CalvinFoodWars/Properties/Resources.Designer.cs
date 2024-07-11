@@ -213,6 +213,26 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap copyright_28781 {
+            get {
+                object obj = ResourceManager.GetObject("copyright_28781", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap credits_7_11_2024 {
+            get {
+                object obj = ResourceManager.GetObject("credits_7_11_2024", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap david {
             get {
                 object obj = ResourceManager.GetObject("david", resourceCulture);
@@ -236,6 +256,16 @@ namespace CalvinFoodWars.Properties {
         internal static System.Drawing.Bitmap doublemoney {
             get {
                 object obj = ResourceManager.GetObject("doublemoney", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EDIT_7_11_2024 {
+            get {
+                object obj = ResourceManager.GetObject("EDIT_7_11_2024", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,6 +383,16 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guide_7_11_2024__1_ {
+            get {
+                object obj = ResourceManager.GetObject("guide_7_11_2024__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap howtoplay {
             get {
                 object obj = ResourceManager.GetObject("howtoplay", resourceCulture);
@@ -463,6 +503,16 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pencil {
+            get {
+                object obj = ResourceManager.GetObject("pencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plate {
             get {
                 object obj = ResourceManager.GetObject("plate", resourceCulture);
@@ -526,6 +576,16 @@ namespace CalvinFoodWars.Properties {
         internal static System.Drawing.Bitmap saves {
             get {
                 object obj = ResourceManager.GetObject("saves", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shop_7_11_2024 {
+            get {
+                object obj = ResourceManager.GetObject("shop_7_11_2024", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

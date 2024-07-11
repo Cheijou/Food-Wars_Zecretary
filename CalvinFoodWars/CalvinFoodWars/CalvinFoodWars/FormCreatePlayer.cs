@@ -14,8 +14,9 @@ namespace CalvinFoodWars
     public partial class FormCreatePlayer : Form
     {
         FormMenu formMain;
-        public Players newPlayer;
-        public Time recordedTime;
+        public string name;
+        Players newPlayer;
+        public Image picture;
         public FormCreatePlayer()
         {
             InitializeComponent();
@@ -28,19 +29,18 @@ namespace CalvinFoodWars
         }
         private void CreatePlayer()
         {
-            //player = new Players("Calvin", 0, Properties.Resources.player, recordedTime);
-            //listPlayer.Add(player);
-            //labelName.Text = player.DisplayName();
-            //labelIncome.Text = player.DisplayIncome();
-            //labelPrevTime.Text = displayCurrent.DisplayTime();
-            //labelCurrentIncome.Text = "Prev Income: " + incomePerGame.ToString();
-            //pictureBoxPlayer.Image = player.Picture; \
-            recordedTime = new Time();
-            newPlayer = new Players(textBoxName.Text, 0, pictureBoxPlayer.Image, recordedTime);
-            formMain.listPlayer.Add(newPlayer);
-            formMain.player = newPlayer;    
-            //formMain.SaveToFilePlayers(formMain.playerFileName);
-            this.Close();
+            try
+            {
+                formMain.playerName = textBoxName.Text;
+                newPlayer = new Players (textBoxName.Text,0,pictureBoxPlayer.Image,null);
+                formMain.playerPicture = pictureBoxPlayer.Image;
+                MessageBox.Show("Player created successfully!");
+                this.Close();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -73,6 +73,17 @@ namespace CalvinFoodWars
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void FormCreatePlayer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            {
+                if (formMain.playerName == "")
+                {
+                    e.Cancel = true;
+                    MessageBox.Show("Please create a player");
+                }
             }
         }
     }

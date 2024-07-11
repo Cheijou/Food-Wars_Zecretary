@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.buttonAdd = new System.Windows.Forms.Button();
-            this.pictureBoxPlayer = new System.Windows.Forms.PictureBox();
             this.buttonBrowse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBoxPlayer = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,16 +47,6 @@
             this.buttonAdd.Text = "Create Player";
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
-            // 
-            // pictureBoxPlayer
-            // 
-            this.pictureBoxPlayer.Image = global::CalvinFoodWars.Properties.Resources.player;
-            this.pictureBoxPlayer.Location = new System.Drawing.Point(118, 119);
-            this.pictureBoxPlayer.Name = "pictureBoxPlayer";
-            this.pictureBoxPlayer.Size = new System.Drawing.Size(119, 111);
-            this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxPlayer.TabIndex = 22;
-            this.pictureBoxPlayer.TabStop = false;
             // 
             // buttonBrowse
             // 
@@ -96,6 +86,16 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Enter username :";
             // 
+            // pictureBoxPlayer
+            // 
+            this.pictureBoxPlayer.Image = global::CalvinFoodWars.Properties.Resources.player;
+            this.pictureBoxPlayer.Location = new System.Drawing.Point(118, 119);
+            this.pictureBoxPlayer.Name = "pictureBoxPlayer";
+            this.pictureBoxPlayer.Size = new System.Drawing.Size(119, 111);
+            this.pictureBoxPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPlayer.TabIndex = 22;
+            this.pictureBoxPlayer.TabStop = false;
+            // 
             // FormCreatePlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -110,6 +110,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormCreatePlayer";
             this.Text = "FormCreatePlayer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCreatePlayer_FormClosing);
             this.Load += new System.EventHandler(this.FormCreatePlayer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();
             this.ResumeLayout(false);

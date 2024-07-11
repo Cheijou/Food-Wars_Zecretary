@@ -352,5 +352,23 @@
   <ItemGroup>
     <None Include="Resources\moneyDis.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guide-7-11-2024 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-7-11-2024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EDIT-7-11-2024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credits-7-11-2024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copyright-28781.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

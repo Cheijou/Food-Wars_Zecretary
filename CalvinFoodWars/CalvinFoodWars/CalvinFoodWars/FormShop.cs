@@ -16,6 +16,8 @@ namespace CalvinFoodWars
         Players players;
         public Buff freeze;
         public Buff boost;
+        public Skin merchZeta;
+        public Skin tumblerZeta;
         public FormShop()
         {
             InitializeComponent();
@@ -47,12 +49,14 @@ namespace CalvinFoodWars
             comboBoxPlayers.DisplayMember = "Name";
             freeze = form.freeze;
             boost = form.boost;
+            //merchZeta = form.merchZeta;
+            //tumblerZeta = form.tumblerZeta;
             labelPriceBoost.Text = boost.Price.ToString();
             labelPriceFreeze.Text = freeze.Price.ToString();
             labelDescBoost.Text = boost.Display();
             labelDescFreeze.Text = freeze.Display();
-            labelFrRem.Text = freeze.Stock.ToString();
-            labelBoostRemaining.Text = boost.Stock.ToString();
+            labelFrRem.Text = "Stock :" + freeze.Stock.ToString();
+            labelBoostRemaining.Text = "Stock : "+boost.Stock.ToString();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,7 +72,7 @@ namespace CalvinFoodWars
                 players = (Players)comboBoxPlayers.SelectedItem;
                 int income = players.Income;
                 players.Income = boost.Sell(income);
-                labelBoostRemaining.Text = boost.Stock.ToString();
+                labelBoostRemaining.Text = "Stock : " + boost.Stock.ToString();
                 labelCurrency.Text = "Income : " + players.Income.ToString();
             }
             catch(Exception ex)
@@ -84,7 +88,7 @@ namespace CalvinFoodWars
                 players = (Players)comboBoxPlayers.SelectedItem;
                 int income = players.Income;
                 players.Income = freeze.Sell(income);
-                labelFrRem.Text = freeze.Stock.ToString();
+                labelFrRem.Text = "Stock :"+freeze.Stock.ToString();
                 labelCurrency.Text = "Income : " + players.Income.ToString();
                 form.currentIncome = income;
             }

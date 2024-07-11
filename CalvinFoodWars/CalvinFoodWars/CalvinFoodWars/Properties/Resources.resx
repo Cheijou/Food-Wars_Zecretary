@@ -163,6 +163,12 @@
   <data name="cone" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="copyright_28781" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\copyright-28781.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="credits_7_11_2024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\credits-7-11-2024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="david" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\david.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,6 +177,9 @@
   </data>
   <data name="doublemoney" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\_468c7cf4-6b7b-400c-ae4c-f0d5055991ee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EDIT_7_11_2024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EDIT-7-11-2024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,6 +214,9 @@
   <data name="guide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\guide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="guide_7_11_2024__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\guide-7-11-2024 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="howtoplay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\howtoplay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -238,6 +250,9 @@
   <data name="patty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\patty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pencil" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pencil.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="plate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -261,6 +276,9 @@
   </data>
   <data name="shopimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shopimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shop_7_11_2024" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shop-7-11-2024.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sound_correct" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound_correct.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

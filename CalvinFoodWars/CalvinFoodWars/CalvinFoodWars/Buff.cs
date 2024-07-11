@@ -22,7 +22,22 @@ namespace CalvinFoodWars
         #endregion
 
         #region Properties
-        public int Stock { get => stock; set => stock = value; }
+        public int Stock 
+        { 
+            get => stock;
+            set
+            {
+                if (value >= 0)
+                {
+                    stock = value;
+                }
+                else
+                {
+                    throw new Exception("Stock empty.");
+                }
+            }
+
+        }
         #endregion
 
         #region Methods

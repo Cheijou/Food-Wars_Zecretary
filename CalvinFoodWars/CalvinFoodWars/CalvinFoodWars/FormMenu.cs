@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Media;
 using System.IO;
 using WMPLib;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace CalvinFoodWars
 {
@@ -17,23 +18,34 @@ namespace CalvinFoodWars
     {
         #region Declarations
         public List<Players> listPlayer = new List<Players>();
-        public Players player;
+        FormCreatePlayer registeredPlayer;
+        Players player;
+        public string playerFileName = "player.dat";
         Players displayCurrent;
         Time recordedTime;
         Time remainingTime;
         Customers customer;
         public Buff boost = new Buff("boost", 100000, Properties.Resources.doublemoney);
         public Buff freeze = new Buff("freeze", 50000, Properties.Resources.freeze);
+        //public Skin merchZeta = new Skin("merchZeta", 10000, kasih gambar merch zeta);
+        //public Skin tumblerZeta = new Skin("tumblerZeta", 10000, kasih gambar tumbler zeta);
+        //untuk mengaktifkan ski nzeta
+        //public bool merchActive
+        //public bool tumblerActive
         private int selectedIngCount = 0;
         private int remainingCustomer = 0;
         private int dialogTime = 0;
         private int delayTime = 0;
         private int incomePerGame = 0;
         public int currentIncome = 0;
+        public string playerName = "";
+        public Image playerPicture = null;  
         int temp2 = 0;
         //untuk mengganti stok dan inisialisasi
         Merchandise tumbler;
         Merchandise plushie;
+        Merchandise zetaMerch;
+        Merchandise zetaTumbler;
         //untuk random
         Random random = new Random();
         WindowsMediaPlayer sound1 = new WindowsMediaPlayer();
@@ -48,6 +60,7 @@ namespace CalvinFoodWars
         #region Game Beginning
         private void StartMenu()
         {
+
             temp2++;
             if (temp2 == 1)
             {
@@ -64,6 +77,10 @@ namespace CalvinFoodWars
             panelShop.Visible = true;
             panelNotif.Visible = false;
             panelBuff.Visible = false;
+            panelEdit.Visible = true;
+            panelEdit.Enabled = true;
+            panelCredits.Visible = true;
+            panelCredits.Enabled = true;
             timerCustomer.Interval = 800;
             timerGame.Interval = 1000;
             timerDelay.Interval = 800;
@@ -78,11 +95,8 @@ namespace CalvinFoodWars
                 formCreate.Owner = this;
                 formCreate.ShowDialog();
             }
-            else
-            {
                 StartMenu();
                 displayCurrent = new Players(null, 0, null, new Time());
-            }
         }
         private void NewGameToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -98,6 +112,16 @@ namespace CalvinFoodWars
             merch.ResetStock();
             tumbler = new Merchandise("tumbler", Properties.Resources.tumbler, 30000);
             plushie = new Merchandise("plushie", Properties.Resources.plushie, 20000);
+            //zetaMerch = new Merchandise("zetaMerch",path gambar,10000)
+            //zetaTumbler = new Merchdise("zetaTumbler",path gambar,10000)
+            //if (merchActive == true)
+            //pictureBoxPlushie.Image = path merch zeta
+            //else
+            //pictureBoxPlushie.Image = path plushie biasa
+            //if (tumblerActive == true)
+            //pictureBoxTumbler.Image = path tumbler zeta
+            //else
+            //pictureBoxTumbler.Image = path tumbler biasa
             dialogTime = 0;
             remainingTime = new Time(0,0,40);
             recordedTime = new Time();
@@ -112,12 +136,18 @@ namespace CalvinFoodWars
             panelGuideBook.Visible = false;
             panelPlayer.Visible = true;
             panelDialog.Visible = true;
+            panelEdit.Visible = false;
+            panelEdit.Enabled = false;
+            panelCredits.Visible = false;   
+            panelCredits.Enabled = false;
             panelTimeAndRemain.Visible = true;
             pictureBoxCustomer.Visible = true;
             pictureBoxOrderedItem.Visible = false;
             pictureBoxPlayer.Visible = true;
             panelShop.Visible = false;
             panelBuff.Visible = true;
+            labelSisaBoost.Text = boost.Stock.ToString()+"x";
+            labelSisaFreeze.Text = freeze.Stock.ToString()+"x"; 
             if (boost.Stock == 0)
             {
                 pictureBoxBoost.Image = Properties.Resources.moneyDis;
@@ -142,7 +172,7 @@ namespace CalvinFoodWars
         #region Creations
         private void CreatePlayer()
         {
-            player = new Players("Calvin", currentIncome, Properties.Resources.player, recordedTime);
+            player = new Players(playerName, currentIncome, playerPicture, recordedTime);
             listPlayer.Add(player);
             labelName.Text = player.DisplayName();
             labelIncome.Text = player.DisplayIncome();
@@ -261,7 +291,11 @@ namespace CalvinFoodWars
             //0 = tumbler, 1 = plushie
             if (type == 0)
             {
+                //if (tumblerActive == false)
+                //
                 customer.Item = tumbler;
+                //else if (tumblerActive == true)
+                //customer.Item = tumblerZeta
             }
             else if (type == 1)
             {
@@ -804,7 +838,7 @@ namespace CalvinFoodWars
 
         #endregion
 
-        #region shop
+        #region Shop
         private void pictureBoxShop_MouseClick(object sender, MouseEventArgs e)
         {
             if (listPlayer.Count > 0)
@@ -820,16 +854,31 @@ namespace CalvinFoodWars
         }
         #endregion
 
-        #region button belum guna
-        
-
-        #endregion
-
         #region Exit Shop
-        
+
         #endregion
 
-        #region exit menu
+        #region Save and Load
+        public void SaveToFilePlayers(string filename)
+        {
+            FileStream myFile = new FileStream(filename, FileMode.Create, FileAccess.Write);
+            BinaryFormatter formatter = new BinaryFormatter();
+            formatter.Serialize(myFile, listPlayer);
+            myFile.Close();
+        }
+        public void LoadFromFilePlayers(string filename)
+        {
+            if (File.Exists(filename))
+            {
+                FileStream myFile = new FileStream(filename, FileMode.Open, FileAccess.Read);
+                BinaryFormatter formatter = new BinaryFormatter();
+                listPlayer = (List<Players>)formatter.Deserialize(myFile);
+                myFile.Close();
+            }
+        }
+        #endregion
+
+        #region Exit menu
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             StartMenu();
@@ -837,13 +886,53 @@ namespace CalvinFoodWars
 
         #endregion
 
-        
-    private void pictureBoxGuideBook_Click(object sender, EventArgs e)
+        #region Open Guide Book
+        private void pictureBoxGuideBook_Click(object sender, EventArgs e)
         {
             FormGuide formGuide = new FormGuide();
             formGuide.Owner = this;
             formGuide.ShowDialog();
         }
+        #endregion
+
+        #region Use Power Ups
+        private void pictureBoxFreeze_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                freeze.Stock--;
+                if (freeze.Stock == 0)
+                {
+                    pictureBoxFreeze.Image = Properties.Resources.freezeDis;
+                }
+                labelSisaBoost.Text = boost.Stock.ToString() + "x";
+                labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+        private void pictureBoxBoost_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                boost.Stock--;
+                if (boost.Stock == 0)
+                {
+                    pictureBoxBoost.Image = Properties.Resources.moneyDis;
+                }
+
+                labelSisaBoost.Text = boost.Stock.ToString() + "x";
+                labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
 
         private void buttonBuyFreeze_Click(object sender, EventArgs e)
         {
@@ -859,24 +948,17 @@ namespace CalvinFoodWars
         {
             
         }
-
-        private void pictureBoxFreeze_Click(object sender, EventArgs e)
+        #region Credits
+        private void pictureBox5_Click(object sender, EventArgs e)
         {
-            freeze.Stock--;
-            if (freeze.Stock == 0)
-            {
-                pictureBoxFreeze.Image = Properties.Resources.freezeDis;
-            }
 
         }
-
-        private void pictureBoxBoost_Click(object sender, EventArgs e)
+        #endregion
+        #region Edit
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
-            boost.Stock--;
-            if (boost.Stock == 0)
-            {
-                pictureBoxBoost.Image = Properties.Resources.moneyDis;
-            }
+
         }
+        #endregion
     }
 }
