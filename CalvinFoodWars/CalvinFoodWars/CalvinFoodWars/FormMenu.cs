@@ -53,7 +53,7 @@ namespace CalvinFoodWars
         Random random = new Random();
         WindowsMediaPlayer sound1 = new WindowsMediaPlayer();
         WindowsMediaPlayer sound2 = new WindowsMediaPlayer();
-        bool boostActivated = false;
+        bool boostActivated;
             
   
         public FormMenu()
@@ -65,7 +65,7 @@ namespace CalvinFoodWars
         #region Game Beginning
         private void StartMenu()
         {
-
+            
             temp2++;
             if (temp2 == 1)
             {
@@ -109,6 +109,7 @@ namespace CalvinFoodWars
         }
         private void NewGame()
         {
+            boostActivated = false;
             timerActual.Start();
             this.Size = new Size(865, 644);
             remainingCustomer = 10;
@@ -414,7 +415,6 @@ namespace CalvinFoodWars
                         WrongOrder();
                     }
                 }
-
             }
             catch (Exception x)
             {
@@ -440,7 +440,7 @@ namespace CalvinFoodWars
                 incomePerGame = player.AddWithPrice(incomePerGame, (2*customer.Item.Price));
                 labelNotif.Text = "+" + (2*customer.Item.Price) + " (boosted!!!)";
             }
-            else
+            else if(boostActivated == false)
             {
                 incomePerGame = player.AddWithPrice(incomePerGame, customer.Item.Price);
                 labelNotif.Text = "+" + customer.Item.Price;
@@ -927,7 +927,6 @@ namespace CalvinFoodWars
         #endregion
 
         #region Use Power Ups
-        
         private void pictureBoxFreeze_Click(object sender, EventArgs e)
         {
             try
@@ -939,25 +938,23 @@ namespace CalvinFoodWars
                 }
                 BackgroundImage = Properties.Resources.efekFreeze;
                 timerFreeze.Interval = 1000;
+                timerCd.Interval = 1000;
                 freezeTime = new Time(0, 0, 7);
+                powerCooldown = new Time(0, 0, 10);
                 timerFreeze.Start();
-                
                 timerGame.Stop();
+                timerCd.Start();
                 labelSisaBoost.Text = boost.Stock.ToString() + "x";
                 labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
                 pictureBoxFreeze.Image = Properties.Resources.freezeDis;
                 pictureBoxBoost.Image = Properties.Resources.moneyDis;
                 pictureBoxFreeze.Enabled = false;
                 pictureBoxBoost.Enabled = false;
-                powerCooldown = new Time(0, 0, 10);
-                timerCd.Interval = 1000;
-                timerCd.Start();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
         private void pictureBoxBoost_Click(object sender, EventArgs e)
         {
@@ -969,18 +966,18 @@ namespace CalvinFoodWars
                     pictureBoxBoost.Image = Properties.Resources.moneyDis;
                 }
                 timerBoost.Interval = 1000;
+                timerCd.Interval = 1000;
                 timerBoost.Start();
+                timerCd.Start();
                 boostActivated = true;
                 boostTime = new Time(0, 0, 10);
+                powerCooldown = new Time(0, 0, 10);
                 labelSisaBoost.Text = boost.Stock.ToString() + "x";
                 labelSisaFreeze.Text = freeze.Stock.ToString() + "x";
                 pictureBoxFreeze.Image = Properties.Resources.freezeDis;
                 pictureBoxBoost.Image = Properties.Resources.moneyDis;
                 pictureBoxFreeze.Enabled = false;
                 pictureBoxBoost.Enabled = false;
-                powerCooldown = new Time(0, 0, 10);
-                timerCd.Interval = 1000;
-                timerCd.Start();
             }
             catch (Exception ex) 
             {
@@ -992,7 +989,6 @@ namespace CalvinFoodWars
         private void timerFreeze_Tick(object sender, EventArgs e)
         {
             freezeTime.Add(-1);
-            
             if (freezeTime.Second == 0)
             {
                 timerGame.Start();
@@ -1003,7 +999,6 @@ namespace CalvinFoodWars
         private void timerBoost_Tick(object sender, EventArgs e)
         {
             boostTime.Add(-1);
-            
             if(boostTime.Second == 0)
             {
                 timerBoost.Stop();
@@ -1048,7 +1043,7 @@ namespace CalvinFoodWars
             
                     pictureBoxFreeze.Image = Properties.Resources.freezeDis;
                 }
-                else
+                if (boost.Stock == 0)
                 {
                     pictureBoxBoost.Image = Properties.Resources.moneyDis;
                 }
