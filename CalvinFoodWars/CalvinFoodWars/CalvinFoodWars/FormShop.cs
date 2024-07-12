@@ -58,7 +58,7 @@ namespace CalvinFoodWars
             labelPriceBoost.Text = boost.Price.ToString();
             labelPriceFreeze.Text = freeze.Price.ToString();
             labelPriceMerch.Text = merchZeta.Price.ToString();
-            labelTumblerAvailable.Text = tumblerZeta.Price.ToString();
+            labelPriceTumbler.Text = tumblerZeta.Price.ToString();
             labelDescBoost.Text = boost.Display();
             labelDescFreeze.Text = freeze.Display();
             labelDescMerch.Text = merchZeta.Display();

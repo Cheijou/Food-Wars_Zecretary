@@ -34,8 +34,8 @@ namespace CalvinFoodWars
         public Players player;
         public Buff boost = new Buff("boost", 100000, Properties.Resources.doublemoney);
         public Buff freeze = new Buff("freeze", 50000, Properties.Resources.freeze);
-        public Skin merchZeta = new Skin("merchZeta", 10000, Properties.Resources.ZetaMerch);
-        public Skin tumblerZeta = new Skin("tumblerZeta", 10000,Properties.Resources.ZetaTumbler);
+        public Skin merchZeta = new Skin("merchZeta", 1000000, Properties.Resources.ZetaMerch);
+        public Skin tumblerZeta = new Skin("tumblerZeta", 750000,Properties.Resources.ZetaTumbler);
         //untuk mengaktifkan skin zeta;
         public bool merchActive = false;
         public bool tumblerActive = false;
