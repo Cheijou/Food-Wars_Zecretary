@@ -524,7 +524,7 @@
             // 
             // pictureBoxztum
             // 
-            this.pictureBoxztum.BackgroundImage = global::CalvinFoodWars.Properties.Resources.ZetaMerchPicture;
+            this.pictureBoxztum.BackgroundImage = global::CalvinFoodWars.Properties.Resources.ZetaTumbler;
             this.pictureBoxztum.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxztum.Location = new System.Drawing.Point(342, 182);
             this.pictureBoxztum.Name = "pictureBoxztum";
@@ -534,7 +534,7 @@
             // 
             // pictureBoxzmerch
             // 
-            this.pictureBoxzmerch.BackgroundImage = global::CalvinFoodWars.Properties.Resources.ZetaTumblerPicture;
+            this.pictureBoxzmerch.BackgroundImage = global::CalvinFoodWars.Properties.Resources.ZetaMerch;
             this.pictureBoxzmerch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBoxzmerch.Location = new System.Drawing.Point(342, 279);
             this.pictureBoxzmerch.Name = "pictureBoxzmerch";

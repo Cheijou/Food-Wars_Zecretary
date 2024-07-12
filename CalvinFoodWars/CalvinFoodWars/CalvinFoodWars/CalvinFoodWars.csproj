@@ -86,6 +86,18 @@
     <Compile Include="FormCreatePlayer.Designer.cs">
       <DependentUpon>FormCreatePlayer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCredit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCredit.Designer.cs">
+      <DependentUpon>FormCredit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEdit.Designer.cs">
+      <DependentUpon>FormEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGuide.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +126,12 @@
     <Compile Include="Time.cs" />
     <EmbeddedResource Include="FormCreatePlayer.resx">
       <DependentUpon>FormCreatePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCredit.resx">
+      <DependentUpon>FormCredit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEdit.resx">
+      <DependentUpon>FormEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGuide.resx">
       <DependentUpon>FormGuide.cs</DependentUpon>
@@ -394,6 +412,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\efekBoost.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zetaMerchOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tumblerOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zetaTumblerOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plushieOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\efekSlot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\efekIgloo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quack.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zeta.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

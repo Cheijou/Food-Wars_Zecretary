@@ -303,6 +303,26 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap efekIgloo {
+            get {
+                object obj = ResourceManager.GetObject("efekIgloo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap efekSlot {
+            get {
+                object obj = ResourceManager.GetObject("efekSlot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap equal {
             get {
                 object obj = ResourceManager.GetObject("equal", resourceCulture);
@@ -583,10 +603,30 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plushieOff {
+            get {
+                object obj = ResourceManager.GetObject("plushieOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap price {
             get {
                 object obj = ResourceManager.GetObject("price", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] quack {
+            get {
+                object obj = ResourceManager.GetObject("quack", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -743,6 +783,16 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tumblerOff {
+            get {
+                object obj = ResourceManager.GetObject("tumblerOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap undo {
             get {
                 object obj = ResourceManager.GetObject("undo", resourceCulture);
@@ -761,11 +811,21 @@ namespace CalvinFoodWars.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] zeta {
+            get {
+                object obj = ResourceManager.GetObject("zeta", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ZetaMerchPicture {
+        internal static System.Drawing.Bitmap ZetaMerch {
             get {
-                object obj = ResourceManager.GetObject("ZetaMerchPicture", resourceCulture);
+                object obj = ResourceManager.GetObject("ZetaMerch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -773,9 +833,29 @@ namespace CalvinFoodWars.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ZetaTumblerPicture {
+        internal static System.Drawing.Bitmap zetaMerchOff {
             get {
-                object obj = ResourceManager.GetObject("ZetaTumblerPicture", resourceCulture);
+                object obj = ResourceManager.GetObject("zetaMerchOff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ZetaTumbler {
+            get {
+                object obj = ResourceManager.GetObject("ZetaTumbler", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zetaTumblerOff {
+            get {
+                object obj = ResourceManager.GetObject("zetaTumblerOff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

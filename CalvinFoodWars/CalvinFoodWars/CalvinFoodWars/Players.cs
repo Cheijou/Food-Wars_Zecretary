@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace CalvinFoodWars
 {
+    [Serializable]
     public class Players
     {
         #region Data Members
@@ -61,6 +62,7 @@ namespace CalvinFoodWars
         }
         public Image Picture { get => picture; set => picture = value; }
         public Time Time { get => time; set => time = value; }
+
         #endregion
 
         #region Methods
@@ -85,6 +87,7 @@ namespace CalvinFoodWars
         {
             Income += price;
         }
+
         
 
         #endregion

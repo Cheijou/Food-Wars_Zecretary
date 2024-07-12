@@ -109,7 +109,7 @@
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label1);
             this.Name = "FormCreatePlayer";
-            this.Text = "FormCreatePlayer";
+            this.Text = "Welcome!";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormCreatePlayer_FormClosing);
             this.Load += new System.EventHandler(this.FormCreatePlayer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPlayer)).EndInit();

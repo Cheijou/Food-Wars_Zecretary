@@ -8,6 +8,7 @@ using System.Xml.Linq;
 
 namespace CalvinFoodWars
 {
+    [Serializable]
     public class Buff : Items
     {
         #region Data Members
@@ -45,13 +46,19 @@ namespace CalvinFoodWars
         {
             if (Name == "boost")
             {
+                if (income > Price)
+                {
+                    Stock++;
+                }
                 income -= Price;
-                Stock++;
             }
             else if (Name == "freeze")
             {
+                if (income > Price)
+                {
+                    Stock++;
+                }
                 income -= Price;
-                Stock++;
             }
             return income;
         }

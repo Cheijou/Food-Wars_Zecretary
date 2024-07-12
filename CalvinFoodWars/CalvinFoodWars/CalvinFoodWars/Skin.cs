@@ -6,6 +6,7 @@ using System.Drawing;
 
 namespace CalvinFoodWars
 {
+    [Serializable]
     public class Skin : Items
     {
         private bool purchased;
@@ -20,19 +21,32 @@ namespace CalvinFoodWars
         {
             if (Name == "merchZeta")
             {
-                Purchased = true;
+                if (income > Price)
+                {
+                    Purchased = true;
+                }
                 income -= Price;
             }
             else if (Name == "tumblerZeta")
             {
-                Purchased = true;
+                if (income > Price)
+                {
+                    Purchased = true;
+                }
                 income -= Price;
             }
             return income;
         }
         public override string Display()
         {
-            return "";
+            if (Name == "merchZeta")
+            {
+                return "Vestia Zeta Figure \nexclusive  HoloID Gen 3 Edition.";
+            }
+            else
+            {
+                return "Vestia Zeta Tumbler \nexclusive  HoloID Gen 3 Edition.";
+            }
         }
     }
 }

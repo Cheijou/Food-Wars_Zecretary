@@ -190,6 +190,12 @@
   <data name="efekFreeze" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\efekFreeze.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="efekIgloo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\efekIgloo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="efekSlot" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\efekSlot.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="equal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\equal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -274,8 +280,14 @@
   <data name="plushie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\plushie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="plushieOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plushieOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="price" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\price.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="quack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\quack.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="recipe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\recipe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -322,16 +334,28 @@
   <data name="tumbler" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tumbler.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tumblerOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tumblerOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wrong" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wrong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ZetaMerchPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="zeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zeta.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ZetaMerch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ZetaTumblerPicture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="zetaMerchOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zetaMerchOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ZetaTumbler" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ZetaMerchPicture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ZetaTumblerPicture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ZetaTumblerPicture.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="zetaTumblerOff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\zetaTumblerOff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

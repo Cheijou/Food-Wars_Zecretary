@@ -33,6 +33,7 @@ namespace CalvinFoodWars
             {
                 formMain.playerName = textBoxName.Text;
                 newPlayer = new Players (textBoxName.Text,0,pictureBoxPlayer.Image,null);
+                formMain.player = newPlayer;
                 formMain.playerPicture = pictureBoxPlayer.Image;
                 MessageBox.Show("Player created successfully!");
                 this.Close();
